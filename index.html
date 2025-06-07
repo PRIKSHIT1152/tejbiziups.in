@@ -114,29 +114,7 @@
     flex-wrap: wrap;
     gap: 1rem;
   }
-  nav a {
-    color: var(--text-light);
-    font-weight: 700;
-    padding: 0.5rem 1.2rem;
-    border-radius: 30px;
-    background: transparent;
-    white-space: nowrap;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    box-shadow: inset 0 0 0 0 var(--text-light);
-    transition: all var(--transition-standard);
-  }
-  nav a:hover,
-  nav a.active,
-  nav a:focus-visible {
-    background: var(--text-light);
-    color: var(--primary);
-    box-shadow: inset 0 0 10px var(--shadow-primary);
-    transform: scale(1.1);
-    outline-offset: 3px;
-    outline: 2px solid var(--text-light);
-  }
-
+  
   /* Hamburger for small screens */
   .nav-toggle {
     display: none;
@@ -621,17 +599,6 @@
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
-
-        <!-- Home -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-
-        <!-- 📂 Categories Dropdown (Always visible in desktop, inside menu on phone) -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categories
-          </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="categoriesDropdown">
             <li><a class="dropdown-item" href="#bhakti">🕉️ Bhakti</a></li>
             <li><a class="dropdown-item" href="#love">💑 Love</a></li>
@@ -642,12 +609,6 @@
             <li><a class="dropdown-item" href="#Digital design items">🖥️ Digital</a></li>
           </ul>
         </li>
-
-        <!-- Contact -->
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-
       </ul>
     </div>
   </div>
