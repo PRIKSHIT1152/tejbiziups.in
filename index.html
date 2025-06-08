@@ -365,7 +365,39 @@
     border-color: var(--primary);
     outline: none;
   }
-
+#customize-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .btn-success {
+      background: #25D366;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 25px;
+      width: 100%;
+      cursor: pointer;
+    }
   /* FOOTER */
   footer {
     background-color: var(--primary);
@@ -916,11 +948,31 @@
 <input id="cust-name" placeholder="Enter your name" required="" style="width:100%; margin-bottom:15px; padding:8px;" type="text"/>
 <label>Mobile Number *</label>
 <input id="cust-mobile" placeholder="Enter your mobile number" required="" style="width:100%; margin-bottom:15px; padding:8px;" type="tel"/>
-<label>Size *</label>
-<input id="cust-size" placeholder="Enter size" required="" style="width:100%; margin-bottom:15px; padding:8px;" type="text"/>
-<label>Quantity *</label>
-<input id="cust-qty" min="1" placeholder="Enter quantity" required="" style="width:100%; margin-bottom:15px; padding:8px;" type="number"/>
-<label>Address *</label>
+<label for="cust-size">Select Size:</label>
+    <select id="cust-size" class="form-control" required>
+      <option value="">--Select Size--</option>
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+      <option value="XXL">XXL</option>
+    </select>
+
+    <label for="cust-color">Select Color:</label>
+    <select id="cust-color" class="form-control" required>
+      <option value="">--Select Color--</option>
+      <option value="Black">Black</option>
+      <option value="White">White</option>
+      <option value="Red">Red</option>
+      <option value="Navy Blue">Navy Blue</option>
+      <option value="Maroon">Maroon</option>
+      <option value="Olive Green">Olive Green</option>
+    </select>
+
+    <label for="cust-qty">Quantity:</label>
+    <input type="number" id="cust-qty" class="form-control" value="1" min="1" max="10" required>
+
+ <label>Address *</label>
 <textarea id="cust-address" placeholder="Enter delivery address" required="" style="width:100%; margin-bottom:15px; padding:8px;"></textarea>
 <label>Note (Optional)</label>
 <textarea id="cust-note" placeholder="Any special instructions or message" style="width:100%; margin-bottom:15px; padding:8px;"></textarea>
@@ -934,25 +986,6 @@
 </div>
 </div>
 </div>
-<!-- 🧾 INVOICE GENERATOR SCRIPT -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script>
-function generatePDFInvoice(order) {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF();
-  doc.setFontSize(18);
-  doc.text("TejBuziups.in Invoice", 20, 20);
-  doc.setFontSize(12);
-  doc.text(`Name: ${order.name}`, 20, 40);
-  doc.text(`Mobile: ${order.mobile}`, 20, 50);
-  doc.text(`Product: ${order.product}`, 20, 60);
-  doc.text(`Size: ${order.size}`, 20, 70);
-  doc.text(`Qty: ${order.qty}`, 20, 80);
-  doc.text(`Address: ${order.address}`, 20, 90);
-  doc.text(`Total Price: ₹${order.qty * 499}`, 20, 100);
-  doc.save("TejBuziups_Invoice.pdf");
-}
-</script>
 <!-- 📲 WHATSAPP + MODAL SCRIPT -->
 <script>
   // Show modal and set product name on Add to Cart click
@@ -974,23 +1007,36 @@ function generatePDFInvoice(order) {
   function sendWhatsAppOrder() {
     const name = document.getElementById('cust-name').value.trim();
     const mobile = document.getElementById('cust-mobile').value.trim();
-    const size = document.getElementById('cust-size').value.trim();
-    const qty = document.getElementById('cust-qty').value.trim();
+    const size = document.getElementById('cust-size').value;
+    const color = document.getElementById('cust-color').value;
+    const qty = parseInt(document.getElementById('cust-qty').value);
     const address = document.getElementById('cust-address').value.trim();
     const note = document.getElementById('cust-note').value.trim();
     const product = document.getElementById('cust-product').value.trim();
+
+    const allowedSizes = ["S","M", "L", "XL", "XXL"];
 
     if (!name || !size || !mobile || !qty || !address) {
       alert('Please fill in all required fields.');
       return;
     }
 
+    if (!allowedSizes.includes(size)) {
+      alert("Please select a valid size (S,M, L, XL, XXL).");
+      return;
+    }
+
+    if (qty < 1 || qty > 10) {
+      alert("Quantity must be between 1 and 10.");
+      return;
+    }
     const message = 
       `🛍 *New Tejbuziups Order*%0A` +
       `👤 *Name:* ${name}%0A` +
       `📱 *Mobile:* ${mobile}%0A` +
       `📦 *Product:* ${product}%0A` +
       `📏 *Size:* ${size}%0A` +
+      `🎨 *Color:* ${color}%0A` +
       `🔢 *Quantity:* ${qty}%0A` +
       `🏠 *Address:* ${address}%0A` +
       (note ? `📝 *Note:* ${note}%0A` : '') +
