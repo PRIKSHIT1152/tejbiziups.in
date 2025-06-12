@@ -202,247 +202,417 @@
   }
 
   
-  /* CATEGORIES */
-  .categories-section {
-    margin-bottom: 4rem;
-  }
-  .categories-section h2 {
-    font-size: 2.6rem;
-    margin-bottom: 1.8rem;
-    color: var(--primary);
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 800;
-    user-select: none;
-    text-align: center;
-    letter-spacing: 0.1em;
-  }
-  .category-grid {
-    display: grid;
-    gap: 1.75rem;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  }
-  .category-card {
-    background: white;
-    color: var(--primary);
-    font-weight: 800;
-    padding: 2rem 1.2rem;
-    text-align: center;
-    border-radius: 24px;
-    box-shadow: 0 8px 18px var(--shadow-accent);
-    transition: transform var(--transition-standard), box-shadow var(--transition-standard);
-    user-select: none;
-    cursor: pointer;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 1.3rem;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .category-card:hover,
-  .category-card:focus-visible {
-    transform: translateY(-12px);
-    box-shadow: 0 16px 38px var(--shadow-primary);
-    outline-offset: 3px;
-    outline: 3px solid var(--primary);
-  }
+  /* 🌟 CATEGORIES – Stylish Gradient Upgrade */
+.categories-section {
+  margin-bottom: 4rem;
+}
 
-  /* PRODUCTS */
-  .section-title {
-    font-size: 2.8rem;
-    color: var(--primary);
-    margin-bottom: 2rem;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    user-select: none;
-    text-align: center;
-  }
-  .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 1rem;
-  }
-  .product-card {
-    background: white;
-    border-radius: 24px;
-    box-shadow: 0 8px 22px var(--shadow-accent);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    user-select: none;
-    transition: transform var(--transition-standard), box-shadow var(--transition-standard);
-    cursor: pointer;
-    position: relative;
-  }
-  .product-card:hover,
-  .product-card:focus-within {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px var(--shadow-primary);
-    outline-offset: 4px;
-    outline: 2px solid var(--primary);
-  }
-  .product-image {
-    max-height: 230px;
-    object-fit: cover;
-    transition: transform var(--transition-standard);
-    border-radius: 24px 24px 0 0;
-    user-select: none;
-  }
-  .product-card:hover .product-image,
-  .product-card:focus-within .product-image {
-    transform: scale(1.07);
-  }
-  .product-info {
-    padding: 1.2rem 2rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .product-info h3 {
-    color: var(--primary);
-    margin-bottom: 0.3rem;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 900;
-    font-size: 1.3rem;
-    letter-spacing: 0.02em;
-  }
-  .product-desc {
-    color: var(--primary);
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    font-style: italic;
-    opacity: 0.85;
-    min-height: 3em;
-  }
-  .product-price {
-    font-size: 1.3rem;
-    font-weight: 900;
-    color: #e64a19;
-    margin-bottom: 1rem;
-  }
-  .product-buttons {
-    display: flex;
-    gap: 1rem;
-  }
+.categories-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.category-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.category-card {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--primary);
+  font-weight: 900;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 0 10px 22px rgba(255, 105, 180, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  opacity: 0.2;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+
+.category-card:hover::before {
+  opacity: 0.4;
+}
+
+.category-card:hover,
+.category-card:focus-visible {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(255, 105, 180, 0.4);
+  outline: 3px solid #ff6a00;
+  outline-offset: 4px;
+}
+
+.category-card span {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to right, #00f0ff, #ff00c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dropdown-menu-dark .dropdown-item {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu-dark .dropdown-item:hover {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: white;
+  border-radius: 8px;
+}
+
+/* PRODUCTS – Upgraded Stylish Version */
+.section-title {
+  font-size: 2.8rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  user-select: none;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 12px 26px rgba(255, 0, 128, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 24px 48px rgba(255, 105, 180, 0.4);
+  border-color: #ff6a00;
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  z-index: -1;
+  filter: blur(12px);
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover::before {
+  opacity: 0.5;
+}
+
+.product-image {
+  max-height: 230px;
+  object-fit: cover;
+  border-radius: 24px 24px 0 0;
+  user-select: none;
+  border: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #ff8a00, #e52e71);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image,
+.product-card:focus-within .product-image {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.product-info {
+  padding: 1.2rem 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-info h3 {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.3rem;
+}
+
+.product-desc {
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  opacity: 0.85;
+  min-height: 3em;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #e64a19;
+  margin-bottom: 1rem;
+}
+
+.product-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
   .btn-primary {
-    background-color: var(--primary);
-    color: white;
-    flex: 1;
-    padding: 0.85rem 0;
-    border-radius: 40px;
-    font-weight: 900;
-    font-size: 1.1rem;
-    box-shadow: 0 6px 18px var(--shadow-primary);
-    transition: background-color 0.35s ease, box-shadow 0.35s ease;
-    user-select: none;
-  }
-  .btn-primary:hover,
-  .btn-primary:focus-visible {
-    background-color: #a63608;
-    box-shadow: 0 8px 24px rgba(166,54,8,0.75);
-    outline: none;
-  }
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: white;
+  flex: 1;
+  padding: 0.85rem 0;
+  border-radius: 40px;
+  font-weight: 900;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 16px rgba(238, 9, 121, 0.35);
+  transition: all 0.4s ease;
+  user-select: none;
+  border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: linear-gradient(90deg, #ee0979, #ff6a00);
+  box-shadow: 0 10px 28px rgba(255, 0, 128, 0.45);
+  transform: scale(1.04);
+  outline: none;
+}
+
   .btn-secondary {
-    background-color: white;
-    color: var(--primary);
-    border: 3px solid var(--primary);
-    flex: 1;
-    padding: 0.85rem 0;
-    border-radius: 40px;
-    font-weight: 900;
-    font-size: 1.1rem;
-    transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
-    user-select: none;
-  }
-  .btn-secondary:hover,
-  .btn-secondary:focus-visible {
-    background-color: var(--primary);
-    color: white;
-    border-color: var(--primary);
-    outline: none;
-  }
+  background-color: #fff;
+  color: var(--primary);
+  border: 3px solid transparent;
+  border-image: linear-gradient(to right, #ff6a00, #ee0979) 1;
+  flex: 1;
+  padding: 0.85rem 0;
+  border-radius: 40px;
+  font-weight: 900;
+  font-size: 1.1rem;
+  transition: all 0.35s ease;
+  user-select: none;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: white;
+  border-color: transparent;
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.3);
+  outline: none;
+}
+
+/* 🌟 Modal Background */
 #customize-modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.6);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-    .modal-content {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      max-width: 400px;
-      width: 90%;
-    }
-    .form-control {
-      width: 100%;
-      padding: 0.6rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .btn-success {
-      background: #25D366;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 25px;
-      width: 100%;
-      cursor: pointer;
-    }
-  /* FOOTER */
-  footer {
-    background-color: var(--primary);
-    color: var(--text-light);
-    padding: 2.5rem 2rem;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    font-weight: 700;
-    font-size: 0.95rem;
-    letter-spacing: 0.07em;
-    user-select: none;
-  }
-  .footer-links,
-  .social-media,
-  .newsletter {
-    display: flex;
-    gap: 1.25rem;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .footer-links a,
-  .social-media a {
-    color: var(--text-light);
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-  }
-  .footer-links a:hover,
-  .social-media a:hover {
-    color: #ffd9d2;
-  }
-  input[type="email"] {
-    padding: 0.5rem 1rem;
-    border-radius: 24px;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    font-weight: 600;
-    width: 220px;
-    max-width: 100%;
-    user-select: text;
-    transition: box-shadow 0.3s ease;
-  }
-  
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 80vh;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 🌈 Modal Container */
+.modal-box {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ✏️ Input Fields */
+.form-control,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+textarea:focus {
+  border-color: #ee0979;
+  outline: none;
+  box-shadow: 0 0 6px rgba(255, 105, 180, 0.3);
+}
+
+/* ✅ Buttons */
+.btn-send {
+  background: linear-gradient(90deg, #25D366, #1ebe57);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 6px 18px rgba(0, 200, 80, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-send:hover {
+  background: linear-gradient(90deg, #1ebe57, #25D366);
+  box-shadow: 0 8px 28px rgba(0, 200, 80, 0.4);
+}
+
+.btn-cancel {
+  background: #aaa;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-cancel:hover {
+  background: #888;
+}
+ /* 🌟 FOOTER */
+footer {
+  background: linear-gradient(135deg, #a63608, #ee0979);
+  color: #fff;
+  padding: 2.5rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.07em;
+  user-select: none;
+  border-top: 5px solid #ffd9d2;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎯 Footer Sections */
+.footer-links,
+.social-media,
+.newsletter {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* 🔗 Footer Links */
+.footer-links a,
+.social-media a {
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.social-media a:hover {
+  color: #ffd9d2;
+  transform: scale(1.1);
+}
+
+/* 📧 Newsletter Input */
+input[type="email"] {
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 220px;
+  max-width: 100%;
+  user-select: text;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+  transition: all 0.3s ease;
+}
+
+input[type="email"]:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* 📩 Send Button (if any) */
+.newsletter button {
+  background: #fff;
+  color: #a63608;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+  border: none;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.newsletter button:hover {
+  background: #ffd9d2;
+  color: #000;
+}
+ 
   /* RESPONSIVE */
   @media (max-width: 900px) {
     .hero {
@@ -630,29 +800,32 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto">
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="categoriesDropdown">
-            <li><a class="dropdown-item" href="#bhakti">🕉️ Bhakti</a></li>
-            <li><a class="dropdown-item" href="#love">💑 Love</a></li>
-            <li><a class="dropdown-item" href="#swag">😎 Swag</a></li>
-            <li><a class="dropdown-item" href="#meme">😂 Meme</a></li>
-            <li><a class="dropdown-item" href="#kids">🧒 Kids</a></li>
-            <li><a class="dropdown-item" href="#gifts">🎁 Gifts</a></li>
-            <li><a class="dropdown-item" href="#Digital design items">🖥️ Digital</a></li>
-          </ul>
-        </li>
+  <ul class="navbar-nav ms-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        🎨 Categories
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="categoriesDropdown">
+        <li><a class="dropdown-item" href="#bhakti">🕉️ Bhakti</a></li>
+        <li><a class="dropdown-item" href="#love">💑 Love</a></li>
+        <li><a class="dropdown-item" href="#swag">😎 Swag</a></li>
+        <li><a class="dropdown-item" href="#meme">😂 Meme</a></li>
+        <li><a class="dropdown-item" href="#kids">🧒 Kids</a></li>
+        <li><a class="dropdown-item" href="#gifts">🎁 Gifts</a></li>
+        <li><a class="dropdown-item" href="#Digital design items">🖥️ Digital</a></li>
       </ul>
-    </div>
-  </div>
+    </li>
+  </ul>
+</div>
 </nav>
-<section style="background:#fff8f0; padding:2rem 1rem; text-align:center; border-top:2px dashed #d84315; margin-top:2rem;">
-<h2 style="color:#d84315; font-family:'Rajdhani', sans-serif; font-weight:900; font-size:1.6rem;">
+<section style="background: linear-gradient(135deg, #fff8f0, #fff0f5); padding: 2.5rem 1rem; text-align: center; border-top: 3px dashed #d84315; margin-top: 3rem; border-radius: 12px 12px 0 0; box-shadow: 0 -5px 25px rgba(0,0,0,0.05);">
+  <h2 style="color: #d84315; font-family: 'Rajdhani', sans-serif; font-weight: 900; font-size: 2rem; letter-spacing: 0.05em; margin-bottom: 1rem;">
     🧵 हर प्रोडक्ट आपके हिसाब से बनेगा!
   </h2>
-<p style="font-size:1.1rem; color:#333; max-width:700px; margin:auto; margin-top:1rem;">
-    TejBuziups पर हर एक आइटम आपकी इच्छा के अनुसार कस्टमाइज़ किया जा सकता है – चाहे नाम हो, फोटो हो, या ख़ास संदेश! <br/>
-<strong>"Tera Style, Teri Soch" – अब सच में आपका स्टाइल, आपकी सोच।</strong>
-</p>
+  <p style="font-size: 1.15rem; color: #333; max-width: 760px; margin: auto; line-height: 1.7;">
+    <span style="font-weight: 600;">TejBuziups</span> पर हर एक आइटम आपकी इच्छा के अनुसार कस्टमाइज़ किया जा सकता है – चाहे नाम हो, फोटो हो, या ख़ास संदेश! <br/><br/>
+    <strong style="color: #a63608; font-size: 1.2rem;">"Tera Style, Teri Soch" – अब सच में आपका स्टाइल, आपकी सोच।</strong>
+  </p>
 </section>
 <section id="bhakti" style="padding:4rem 2rem;"><div style="max-width:1200px; margin:auto; text-align:center;"><h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🕉️ Bhakti Zone</h2><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
 <div class="product-card" style="background:#f2f3f1; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
@@ -935,55 +1108,284 @@
 </div>
 </div>
 </section>
+<section>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #ffe0e0, #e0ffff);
+    padding: 30px;
+    text-align: center;
+  }
 
+  #cardCanvas {
+    border: 5px solid transparent;
+    border-image: linear-gradient(135deg, #ff6a00, #ee0979) 1;
+    margin: 20px auto;
+    display: block;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  #cardCanvas:hover {
+    transform: scale(1.02);
+  }
+
+  .input-container {
+    background: #ffffffc4;
+    padding: 25px 30px;
+    display: inline-block;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(4px);
+    border: 2px solid rgba(255, 105, 180, 0.15);
+    margin-bottom: 20px;
+  }
+
+  input, select {
+    padding: 12px 16px;
+    margin: 8px 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+  input:focus, select:focus {
+    border-color: #ff5e78;
+    box-shadow: 0 0 6px rgba(255, 105, 180, 0.3);
+  }
+
+  button {
+    padding: 12px 20px;
+    margin: 10px 6px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(90deg, #ff5e78, #ff8a65);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(255, 105, 135, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background: linear-gradient(90deg, #ff3e5c, #ff7043);
+    box-shadow: 0 6px 20px rgba(255, 105, 135, 0.5);
+    transform: scale(1.03);
+  }
+</style>
+<body>
+
+<h2>🌟 TejBuziups Gift Card Generator 🌟</h2>
+
+<div class="input-container">
+  <input type="text" id="nameInput" placeholder="Aapka Naam likho" />
+  <input type="file" id="photoInput" accept="image/*" onchange="loadImage(event)" />
+  <select id="themeSelect">
+    <option value="romantic">Romantic Rose</option>
+    <option value="birthday">Birthday Balloons</option>
+    <option value="bhakti">Floral Bhakti</option>
+    <option value="motivation">Motivational Swag</option>
+    <option value="festive">Festive Sparkle</option>
+    <option value="friendship">Friendly Bond</option>
+    <option value="anniversary">Anniversary Love</option>
+    <option value="thankyou">Thank You Vibe</option>
+    <option value="goodluck">Good Luck Spark</option>
+    <option value="apology">Apology Note</option>
+    <option value="goodmorning">Good Morning Sunshine</option>
+  </select>
+  <br/>
+  <button onclick="generateCard()">Generate</button>
+  <button onclick="downloadCard()">Download Image</button>
+  <button onclick="shareOnWhatsApp()">Share on WhatsApp</button>
+</div>
+
+<canvas id="cardCanvas" width="600" height="580"></canvas>
+
+<p><em>Made with ❤️ by TejBuziups – Tera Style, Teri Soch</em></p>
+
+<script>
+const canvas = document.getElementById("cardCanvas");
+const ctx = canvas.getContext("2d");
+let uploadedImage = null;
+
+const qrImage = new Image();
+qrImage.src = "tejbuziups_card_qr.png"; // place this file in the same folder
+
+const messages = {
+  romantic: "Teri Muskaan, Meri Pehchaan — TejBuziups ke is tohfe mein hai tera naam.",
+  birthday: "Happy Birthday! Yeh tohfa tere naam, TejBuziups ke pyaar ke saath.",
+  bhakti: "Bhagwan ki kripa aur TejBuziups ka pyaar — dono tere saath ho hamesha.",
+  motivation: "Utho, Badho, Jeeto — Swag ke saath, TejBuziups ke gift ke saath!",
+  festive: "Tyohar ki khushiyan aur TejBuziups ka pyar — dono jashn karo!",
+  friendship: "Dosti ka ye bandhan sadaa banaye rakho — TejBuziups ke ek pyaare gift ke saath!",
+  anniversary: "Har saal ki yaad mein, ek chhota sa gift TejBuziups ki taraf se.",
+  thankyou: "Shukriya kehna ho toh kehna style ke saath — TejBuziups gift ke saath!",
+  goodluck: "Nayi shuruaat ho ya exam — TejBuziups ki taraf se Good Luck!",
+  apology: "Kabhi kabhi ek sorry bhi kaafi hota hai — TejBuziups ke pyaar bhare andaaz mein.",
+  goodmorning: "Subah ki ek muskaan, din bhar ki taaqat — Good Morning from TejBuziups!"
+};
+
+function wrapTextGradient(ctx, text, x, y, maxWidth, lineHeight) {
+  const words = text.split(" ");
+  let line = "", offset = 0;
+  for (let n = 0; n < words.length; n++) {
+    const testLine = line + words[n] + ' ';
+    if (ctx.measureText(testLine).width > maxWidth && n > 0) {
+      const grd = ctx.createLinearGradient(x, y + offset, x + maxWidth, y + offset);
+      grd.addColorStop(0, "#ff8a00");
+      grd.addColorStop(1, "#da1b60");
+      ctx.fillStyle = grd;
+      ctx.fillText(line, x, y + offset);
+      line = words[n] + ' ';
+      offset += lineHeight;
+    } else {
+      line = testLine;
+    }
+  }
+  const grd = ctx.createLinearGradient(x, y + offset, x + maxWidth, y + offset);
+  grd.addColorStop(0, "#43cea2");
+  grd.addColorStop(1, "#185a9d");
+  ctx.fillStyle = grd;
+  ctx.fillText(line, x, y + offset);
+}
+
+function loadImage(event) {
+  const reader = new FileReader();
+  reader.onload = function () {
+    uploadedImage = new Image();
+    uploadedImage.onload = () => generateCard();
+    uploadedImage.src = reader.result;
+  };
+  reader.readAsDataURL(event.target.files[0]);
+}
+
+function generateCard() {
+  const name = document.getElementById("nameInput").value || "Dost";
+  const theme = document.getElementById("themeSelect").value;
+
+  // Gradient background
+  const bgGradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+  bgGradient.addColorStop(0, "#fff3e0");
+  bgGradient.addColorStop(1, "#ffe0f7");
+  ctx.fillStyle = bgGradient;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Ribbon border
+  ctx.strokeStyle = "#ff69b4";
+  ctx.lineWidth = 12;
+  ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);
+
+  // Emojis in corners
+  ctx.font = "26px serif";
+  ctx.fillStyle = "#f44336";
+  ctx.fillText("🌸", 25, 45);
+  ctx.fillText("🌟", canvas.width - 55, 45);
+  ctx.fillText("✨", 25, canvas.height - 25);
+  ctx.fillText("🌼", canvas.width - 55, canvas.height - 25);
+
+  // Heading
+  ctx.font = "bold 26px Arial";
+  ctx.fillStyle = "#333";
+  ctx.fillText("TejBuziups Gift Card", 160, 60);
+
+  // Name
+  ctx.font = "20px serif";
+  ctx.fillText(`To: ${name}`, 60, 100);
+
+  // User photo (circular) — now below name and above message
+  if (uploadedImage) {
+    const x = 260, y = 120, radius = 50;
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(x + radius, y + radius, radius, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.clip();
+    ctx.drawImage(uploadedImage, x, y, radius * 2, radius * 2);
+    ctx.restore();
+    ctx.strokeStyle = "#666";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+  }
+
+  // Message
+  ctx.font = "20px 'Segoe UI'";
+  wrapTextGradient(ctx, messages[theme], 60, 240, 480, 30);
+
+  // Footer
+  ctx.font = "16px monospace";
+  ctx.fillStyle = "#000";
+  ctx.fillText("Tera Style, Teri Soch – www.tejbuziups.in", 60, 360);
+
+  // QR code
+  if (qrImage.complete) {
+    ctx.drawImage(qrImage, 230, 390, 140, 140);
+  } else {
+    qrImage.onload = () => ctx.drawImage(qrImage, 230, 390, 140, 140);
+  }
+}
+
+function downloadCard() {
+  const link = document.createElement("a");
+  link.download = "tejbuziups-gift-card.png";
+  link.href = canvas.toDataURL();
+  link.click();
+}
+  function shareOnWhatsApp() {
+    const name = document.getElementById('nameInput').value || "Dost";
+    const message = `🎁 TejBuziups Gift Card for ${name}!
+Create yours at: https://www.tejbuziups.in/gift-card`;
+    const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</section>
 <!-- 🌟 ORDER CUSTOMIZATION MODAL -->
-<div id="customize-modal" style="display:none; position:fixed; top:0; left:0;
-  width:100%; height:100%; background:rgba(0,0,0,0.6);
-  justify-content:center; align-items:center; z-index:1000;">
-<div style="background:#fff; padding:20px; border-radius:8px; width:90%; max-width:400px; box-shadow:0 0 10px rgba(0,0,0,0.3);">
-<h2 style="text-align:center; margin-bottom:20px;">Order Customization</h2>
-<label>Product Name</label>
-<input id="cust-product" readonly="" style="width:100%; margin-bottom:15px; padding:8px; font-weight:bold;" type="text"/>
-<label>Your Name *</label>
-<input id="cust-name" placeholder="Enter your name" required="" style="width:100%; margin-bottom:15px; padding:8px;" type="text"/>
-<label>Mobile Number *</label>
-<input id="cust-mobile" placeholder="Enter your mobile number" required="" style="width:100%; margin-bottom:15px; padding:8px;" type="tel"/>
-<label for="cust-size">Select Size:</label>
+<div id="customize-modal">
+  <div class="modal-box">
+    <h2 style="text-align:center; margin-bottom:20px;">🛍️ Order Customization</h2>
+
+    <label>Product Name</label>
+    <input id="cust-product" class="form-control" readonly>
+
+    <label>Your Name *</label>
+    <input id="cust-name" class="form-control" placeholder="Enter your name" required>
+
+    <label>Mobile Number *</label>
+    <input id="cust-mobile" class="form-control" placeholder="Enter your mobile number" required type="tel">
+
+    <label>Select Size:</label>
     <select id="cust-size" class="form-control" required>
       <option value="">--Select Size--</option>
-      <option value="S">S</option>
-      <option value="M">M</option>
-      <option value="L">L</option>
-      <option value="XL">XL</option>
-      <option value="XXL">XXL</option>
+      <option>S</option><option>M</option><option>L</option>
+      <option>XL</option><option>XXL</option>
     </select>
 
-    <label for="cust-color">Select Color:</label>
+    <label>Select Color:</label>
     <select id="cust-color" class="form-control" required>
       <option value="">--Select Color--</option>
-      <option value="Black">Black</option>
-      <option value="White">White</option>
-      <option value="Red">Red</option>
-      <option value="Navy Blue">Navy Blue</option>
-      <option value="Maroon">Maroon</option>
-      <option value="Olive Green">Olive Green</option>
+      <option>Black</option><option>White</option><option>Red</option>
+      <option>Navy Blue</option><option>Maroon</option><option>Olive Green</option>
     </select>
 
-    <label for="cust-qty">Quantity:</label>
+    <label>Quantity:</label>
     <input type="number" id="cust-qty" class="form-control" value="1" min="1" max="10" required>
 
- <label>Address *</label>
-<textarea id="cust-address" placeholder="Enter delivery address" required="" style="width:100%; margin-bottom:15px; padding:8px;"></textarea>
-<label>Note (Optional)</label>
-<textarea id="cust-note" placeholder="Any special instructions or message" style="width:100%; margin-bottom:15px; padding:8px;"></textarea>
-<div style="text-align:center;">
-<button onclick="sendWhatsAppOrder()" style="background:#25D366; color:#fff; border:none; padding:12px 25px; font-size:16px; cursor:pointer; border-radius:4px; margin-right:10px;">
-        Send Order via WhatsApp
-      </button>
-<button onclick="closeModal()" style="background:#aaa; color:#fff; border:none; padding:12px 25px; font-size:16px; cursor:pointer; border-radius:4px;">
-        Cancel
-      </button>
-</div>
+    <label>Address *</label>
+    <textarea id="cust-address" class="form-control" placeholder="Enter delivery address" required></textarea>
+
+    <label>Note (Optional)</label>
+    <textarea id="cust-note" class="form-control" placeholder="Any special instructions"></textarea>
+
+    <button onclick="sendWhatsAppOrder()" class="btn-send">📩 Send Order via WhatsApp</button>
+    <button onclick="closeModal()" class="btn-cancel">❌ Cancel</button>
+  </div>
 </div>
 </div>
 <!-- 📲 WHATSAPP + MODAL SCRIPT -->
@@ -1051,95 +1453,44 @@
   }
 </script>
 <footer>
-<p>© 2025 <strong>TejBuziups</strong>. All rights reserved.</p>
-<p>Crafted with care and tradition.</p>
-<span class="style13">Designed &amp; Maintained by:</span> <a href="tejbuziups.html">
-<span class="style13">Prikshit Tyagi.</span></a>
-<p><a href="https://www.instagram.com/buziup_tej/">Visit TejBuziups</a></p>
+  <div class="footer-content" style="text-align: center;">
+    <p>© 2025 <strong style="color: #ffd9d2;">TejBuziups</strong>. All rights reserved.</p>
+    <p>🧵 Crafted with care, faith, and desi tradition.</p>
+    <p>
+      <span style="font-weight: 600;">Designed & Maintained by:</span>
+      <a href="index.html" style="color: #fff; text-decoration: underline;">Prikshit Tyagi</a>
+    </p>
+    <p>
+      👉 <a href="https://www.instagram.com/buziup_tej/" target="_blank" style="color: #ffd9d2;">Visit TejBuziups on Instagram</a>
+    </p>
+  </div>
 </footer>
+
 </script>
-<!-- 📸 LIVE PURCHASE BANNER -->
-<div id="live-banner" style="position:fixed; bottom:70px; left:10px; background:#fff3e0; color:#4e342e; padding:0.8rem 1.2rem; border-left:6px solid #d84315; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1); font-size:0.9rem; z-index:10000;">
-Someone just bought “Shiv Bhakt Tee” from Mumbai 🚚
-</div>
-<script>
-  const messages = [
-    "Someone just bought “Shiv Bhakt Tee” from Mumbai 🚚",
-    "Priya from Delhi ordered Custom Mug – ‘Papa Ki Ladli’ 🧡",
-    "Rahul from Jaipur added a Couple Combo to cart 💑",
-    "Live: Meme Pack ordered from Pune 😂"
-  ];
-  let idx = 0;
-  setInterval(() => {
-    document.getElementById("live-banner").innerText = messages[idx % messages.length];
-    idx++;
-  }, 5000);
-</script>
-  <!-- 💬 TejBot Chat Widget -->
-  <div id="tejbot-widget" style="position:fixed; bottom:100px; right:20px; z-index:10000;">
-    <button onclick="toggleTejBot()" style="background:#673ab7; color:white; border:none; border-radius:50px; padding:12px 20px; font-size:16px; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
-      TejBot
-    </button>
-    <div id="tejbot-box" style="display:none; width:320px; max-width:20vw; margin-top:10px; background:white; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.3);">
-      <div style="background:#673ab7; color:white; padding:12px 16px; border-radius:12px 12px 0 0; font-weight:bold; position:relative;">
-        TejBot Assistant
-        <button onclick="toggleTejBot()" style="position:absolute; right:10px; top:8px; background:none; border:none; font-size:18px; color:white;">×</button>
-      </div>
-      <div id="tejbot-chat" style="height:260px; overflow-y:auto; padding:10px; font-size:14px;"></div>
-      <div style="display:flex; border-top:1px solid #ccc;">
-        <input id="tejbot-input" placeholder="Ask your question..." 
-               onkeypress="if(event.key === 'Enter'){ handleTejBot(); }"
-               style="flex:1; border:none; padding:10px;" />
-        <button onclick="handleTejBot()" style="background:#673ab7; color:white; border:none; padding:10px;">Send</button>
-      </div>
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TejBot Chat Widget</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- 💬 TejBot Chat Widget -->
+<div id="tejbot-widget">
+  <button onclick="toggleTejBot()">💬 TejBot</button>
+  <div id="tejbot-box">
+    <div class="tejbot-header">
+      TejBot Assistant 🤖
+      <button onclick="toggleTejBot()">×</button>
+    </div>
+    <div id="tejbot-chat"></div>
+    <div class="tejbot-input-area">
+      <input id="tejbot-input" placeholder="Ask anything..." onkeypress="if(event.key === 'Enter'){ handleTejBot(); }" />
+      <button onclick="handleTejBot()">Send</button>
     </div>
   </div>
+</div>
 
-  <!-- 🤖 TejBot Script -->
-  <script>
-    const tejbotData = [
-      { keywords: ["hello", "hi"], reply: "Hi! I’m TejBot. Ask me anything about TejBuziups!" },
-      { keywords: ["what", "tejbuziups"], reply: "TejBuziups is your desi destination for fashion, bhakti wear, meme T-shirts, mugs, posters, logos and much more." },
-      { keywords: ["custom", "personalize", "design"], reply: "Yes! You can customize anything – T-shirts, mugs, keychains with your name, photo, or quote." },
-      { keywords: ["logo", "digital"], reply: "We offer digital services like logo design, poster creation, banner design, and branding kits!" },
-      { keywords: ["order", "how"], reply: "Just pick a product and fill the WhatsApp form — we’ll take care of the rest!" },
-      { keywords: ["payment", "upi", "qr"], reply: "We accept UPI, QR code, bank transfer and sometimes COD. Payment link is shared after confirmation." },
-      { keywords: ["delivery", "time"], reply: "Your order usually reaches you within 5–7 working days via courier." },
-      { keywords: ["return", "refund"], reply: "Returns are accepted within 5 days for damage or misprint. Message us on WhatsApp for help." },
-      { keywords: ["bulk", "corporate"], reply: "Yes! Bulk orders are welcome – get discounted rates for schools, events, or gifting." },
-      { keywords: ["contact", "email"], reply: "Email: support@tejbuziups.in or chat with us on WhatsApp directly." },
-      { keywords: ["categories", "product"], reply: "We offer Bhakti Tees, Couple Sets, Meme Swag, Kids Gifts, and even Digital Items!" }
-    ];
-
-    function toggleTejBot() {
-      const box = document.getElementById("tejbot-box");
-      box.style.display = box.style.display === "none" ? "block" : "none";
-    }
-
-    function handleTejBot() {
-      const input = document.getElementById("tejbot-input");
-      const chat = document.getElementById("tejbot-chat");
-      const msg = input.value.trim().toLowerCase();
-      if (!msg) return;
-
-      chat.innerHTML += `<div><strong>You:</strong> ${msg}</div>`;
-      input.value = "";
-
-      let found = false;
-      for (let q of tejbotData) {
-        if (q.keywords.some(keyword => msg.includes(keyword))) {
-          chat.innerHTML += `<div><strong>TejBot:</strong> ${q.reply}</div>`;
-          found = true;
-          break;
-        }
-      }
-
-      if (!found) {
-        chat.innerHTML += `<div><strong>TejBot:</strong> I'm learning more every day! Try asking about products, delivery, or payments.</div>`;
-      }
-
-      chat.scrollTop = chat.scrollHeight;
-    }
-  </script>
+<script src="tejbot.js"></script>
   </body>
 </html>
