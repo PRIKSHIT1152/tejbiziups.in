@@ -1,793 +1,19 @@
-
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>TejBuziups.in - Tera Style, Teri Soch</title>
-<meta content="TejBuziups.in - Multi-theme Print on Demand e-commerce for Indian youth with Bhakti, Meme Zone, Youth Swag and more. Tera Style, Teri Soch." name="description"/>
-<meta content="Print on Demand, Indian youth fashion, Bhakti Collection, Meme Zone, Festival Specials, TejBuziups.in" name="keywords"/>
-<meta content="TejBuziups Team" name="author"/>
-<meta content="TejBuziups.in - Tera Style, Teri Soch" property="og:title"/>
-<meta content="Vibrant, culturally-inspired POD for Indian youth and devotees." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://TejBuziups.in" property="og:url"/>
-<meta content="https://i.imgur.com/RR5pZvH.jpg" property="og:image"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Rajdhani:wght@700;900&amp;display=swap" rel="stylesheet"/>
-<style>
-  /* Reset */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  body, h1, h2, h3, p, ul, li, a, button, input {
-    margin: 0; padding: 0;
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  ul {
-    list-style: none;
-  }
-  button, input {
-    cursor: pointer;
-    border: none;
-    border-radius: 40px;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    user-select: none;
-  }
-  input {
-    cursor: text;
-  }
-  img {
-    max-width: 100%;
-    display: block;
-  }
-  /* CSS Variables */
-  :root {
-    --primary: #d84315;
-    --secondary: #ff7043;
-    --accent: #ffccbc;
-    --background: #fff2f0;
-    --background-pattern: url('https://www.transparenttextures.com/patterns/gplay.png');
-    --text-dark: #2c2c2c;
-    --text-light: #fff7f5;
-    --shadow-primary: rgba(216, 67, 21, 0.4);
-    --shadow-accent: rgba(255, 112, 67, 0.4);
-    --transition-standard: 0.4s ease;
-  }
-  body {
-    background: var(--background) var(--background-pattern);
-    background-repeat: repeat;
-    color: var(--text-dark);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    scroll-behavior: smooth;
-  }
-
-  /* HEADER */
-  header {
-    background: var(--primary);
-    padding: 1.25rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    color: var(--text-light);
-    box-shadow: 0 5px 15px var(--shadow-primary);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .logo a {
-    font-size: 2.25rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    font-family: 'Rajdhani', sans-serif;
-    color: var(--text-light);
-    user-select: none;
-    opacity: 0;
-    animation: fadeSlideDown 1s ease forwards;
-  }
-  .tagline {
-    font-style: italic;
-    font-weight: 600;
-    font-family: 'Brush Script MT', cursive, Arial, sans-serif;
-    font-size: 1.2rem;
-    margin-left: 2rem;
-    color: var(--accent);
-    flex-grow: 1;
-    text-align: center;
-    user-select: none;
-    opacity: 0;
-    animation: fadeSlideDown 1.2s ease forwards;
-  }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  /* Hamburger for small screens */
-  .nav-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    width: 28px;
-    height: 21px;
-    justify-content: space-between;
-  }
-  .nav-toggle span {
-    background: var(--text-light);
-    height: 3px;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-  /* Responsive nav menu */
-  #nav-menu {
-    display: flex;
-  }
-  @media (max-width: 900px) {
-    .nav-toggle {
-      display: flex;
-      position: relative;
-      z-index: 110;
-    }
-    #nav-menu {
-      display: none;
-      position: absolute;
-      top: 60px;
-      right: 2rem;
-      flex-direction: flex;
-      background: var(--primary);
-      padding: 1rem 2rem;
-      border-radius: 16px;
-      box-shadow: 0 8px 25px var(--shadow-primary);
-      width: 180px;
-      user-select: none;
-    }
-    #nav-menu.show {
-      display: flex;
-      animation: fadeInMenu 0.3s ease forwards;
-    }
-    nav a {
-      padding: 0.8rem 0;
-      font-size: 1.1rem;
-    }
-    .tagline {
-      order: 3;
-      width: 100%;
-      margin: 1rem 0 1.2rem 0;
-      font-size: 1.15rem;
-      text-align: center;
-    }
-  }
-
-  /* MAIN CONTENT */
-  main {
-    flex-grow: 1;
-    max-width: 1280px;
-    margin: 2rem auto 4rem;
-    padding: 0 1.25rem;
-    width: 100%;
-  }
-
-  /* Animations */
-  @keyframes fadeSlideDown {
-    0% {
-      opacity: 0;
-      transform: translateY(-15px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  @keyframes fadeInMenu {
-    0% {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  
-  /* 🌟 CATEGORIES – Stylish Gradient Upgrade */
-.categories-section {
-  margin-bottom: 4rem;
-}
-
-.categories-section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 2rem;
-  background: linear-gradient(to right, #ff6a00, #ee0979);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 900;
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.category-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-}
-
-.category-card {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--primary);
-  font-weight: 900;
-  padding: 2.5rem 1.5rem;
-  text-align: center;
-  border-radius: 30px;
-  box-shadow: 0 10px 22px rgba(255, 105, 180, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  user-select: none;
-  cursor: pointer;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.category-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #ff6a00, #ee0979);
-  opacity: 0.2;
-  z-index: 0;
-  transition: opacity 0.3s ease;
-}
-
-.category-card:hover::before {
-  opacity: 0.4;
-}
-
-.category-card:hover,
-.category-card:focus-visible {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 18px 40px rgba(255, 105, 180, 0.4);
-  outline: 3px solid #ff6a00;
-  outline-offset: 4px;
-}
-
-.category-card span {
-  position: relative;
-  z-index: 1;
-  background: linear-gradient(to right, #00f0ff, #ff00c8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.dropdown-menu-dark .dropdown-item {
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.dropdown-menu-dark .dropdown-item:hover {
-  background: linear-gradient(90deg, #ff6a00, #ee0979);
-  color: white;
-  border-radius: 8px;
-}
-
-/* PRODUCTS – Upgraded Stylish Version */
-.section-title {
-  font-size: 2.8rem;
-  color: var(--primary);
-  margin-bottom: 2rem;
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  user-select: none;
-  text-align: center;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-.product-card {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 24px;
-  box-shadow: 0 12px 26px rgba(255, 0, 128, 0.2);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  user-select: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  position: relative;
-  border: 2px solid transparent;
-  background-clip: padding-box;
-}
-
-.product-card:hover,
-.product-card:focus-within {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 24px 48px rgba(255, 105, 180, 0.4);
-  border-color: #ff6a00;
-}
-
-.product-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #ff6a00, #ee0979);
-  z-index: -1;
-  filter: blur(12px);
-  opacity: 0.3;
-  transition: opacity 0.3s ease;
-}
-
-.product-card:hover::before {
-  opacity: 0.5;
-}
-
-.product-image {
-  max-height: 230px;
-  object-fit: cover;
-  border-radius: 24px 24px 0 0;
-  user-select: none;
-  border: 4px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right, #ff8a00, #e52e71);
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover .product-image,
-.product-card:focus-within .product-image {
-  transform: scale(1.05) rotate(-1deg);
-}
-
-.product-info {
-  padding: 1.2rem 2rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.product-info h3 {
-  background: linear-gradient(90deg, #ff6a00, #ee0979);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: 'Rajdhani', sans-serif;
-  font-weight: 900;
-  font-size: 1.4rem;
-  letter-spacing: 0.02em;
-  margin-bottom: 0.3rem;
-}
-
-.product-desc {
-  color: var(--primary);
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  font-style: italic;
-  opacity: 0.85;
-  min-height: 3em;
-}
-
-.product-price {
-  font-size: 1.3rem;
-  font-weight: 900;
-  color: #e64a19;
-  margin-bottom: 1rem;
-}
-
-.product-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-  .btn-primary {
-  background: linear-gradient(90deg, #ff6a00, #ee0979);
-  color: white;
-  flex: 1;
-  padding: 0.85rem 0;
-  border-radius: 40px;
-  font-weight: 900;
-  font-size: 1.1rem;
-  box-shadow: 0 6px 16px rgba(238, 9, 121, 0.35);
-  transition: all 0.4s ease;
-  user-select: none;
-  border: none;
-}
-
-.btn-primary:hover,
-.btn-primary:focus-visible {
-  background: linear-gradient(90deg, #ee0979, #ff6a00);
-  box-shadow: 0 10px 28px rgba(255, 0, 128, 0.45);
-  transform: scale(1.04);
-  outline: none;
-}
-
-  .btn-secondary {
-  background-color: #fff;
-  color: var(--primary);
-  border: 3px solid transparent;
-  border-image: linear-gradient(to right, #ff6a00, #ee0979) 1;
-  flex: 1;
-  padding: 0.85rem 0;
-  border-radius: 40px;
-  font-weight: 900;
-  font-size: 1.1rem;
-  transition: all 0.35s ease;
-  user-select: none;
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus-visible {
-  background: linear-gradient(to right, #ff6a00, #ee0979);
-  color: white;
-  border-color: transparent;
-  transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.3);
-  outline: none;
-}
-
-/* 🌟 Modal Background */
-#customize-modal {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 80vh;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(4px);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-/* 🌈 Modal Container */
-.modal-box {
-  background: rgba(255, 255, 255, 0.96);
-  padding: 2rem;
-  border-radius: 16px;
-  width: 90%;
-  max-width: 420px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-  animation: slideUp 0.4s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* ✏️ Input Fields */
-.form-control,
-textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.form-control:focus,
-textarea:focus {
-  border-color: #ee0979;
-  outline: none;
-  box-shadow: 0 0 6px rgba(255, 105, 180, 0.3);
-}
-
-/* ✅ Buttons */
-.btn-send {
-  background: linear-gradient(90deg, #25D366, #1ebe57);
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  width: 100%;
-  margin-bottom: 0.8rem;
-  box-shadow: 0 6px 18px rgba(0, 200, 80, 0.25);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.btn-send:hover {
-  background: linear-gradient(90deg, #1ebe57, #25D366);
-  box-shadow: 0 8px 28px rgba(0, 200, 80, 0.4);
-}
-
-.btn-cancel {
-  background: #aaa;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  width: 100%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.btn-cancel:hover {
-  background: #888;
-}
- /* 🌟 FOOTER */
-footer {
-  background: linear-gradient(135deg, #a63608, #ee0979);
-  color: #fff;
-  padding: 2.5rem 2rem;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.07em;
-  user-select: none;
-  border-top: 5px solid #ffd9d2;
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* 🎯 Footer Sections */
-.footer-links,
-.social-media,
-.newsletter {
-  display: flex;
-  gap: 1.25rem;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-/* 🔗 Footer Links */
-.footer-links a,
-.social-media a {
-  color: #fff;
-  transition: color 0.3s ease, transform 0.3s ease;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.footer-links a:hover,
-.social-media a:hover {
-  color: #ffd9d2;
-  transform: scale(1.1);
-}
-
-/* 📧 Newsletter Input */
-input[type="email"] {
-  padding: 0.6rem 1.2rem;
-  border-radius: 30px;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  font-weight: 600;
-  width: 220px;
-  max-width: 100%;
-  user-select: text;
-  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
-  transition: all 0.3s ease;
-}
-
-input[type="email"]:focus {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-
-/* 📩 Send Button (if any) */
-.newsletter button {
-  background: #fff;
-  color: #a63608;
-  font-weight: bold;
-  padding: 0.6rem 1rem;
-  border-radius: 30px;
-  border: none;
-  margin-left: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.newsletter button:hover {
-  background: #ffd9d2;
-  color: #000;
-}
- 
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    .hero-img-container {
-      margin-left: 0;
-      margin-top: 1.5rem;
-      max-width: 100%;
-      border-radius: 20px;
-    }
-    
-    .tagline {
-      order: 3;
-      width: 100%;
-      margin: 1rem 0 1.2rem 0;
-      font-size: 1.15rem;
-      text-align: center;
-    }
-    nav {
-      justify-content: center;
-      gap: 0.8rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    nav a {
-      font-size: 0.85rem;
-      padding: 0.4rem 0.9rem;
-      white-space: nowrap;
-    }
-    .hero-text h1 {
-      font-size: 2.5rem;
-    }
-    .hero-text p {
-      font-size: 1.1rem;
-    }
-    .categories-section h2 {
-      font-size: 2rem;
-    }
-    .section-title {
-      font-size: 2.2rem;
-    }
-    .product-card {
-      margin: 0 auto;
-      max-width: 92vw;
-    }
-  }
-</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Store",
-  "name": "TejBuziups.in",
-  "image": "https://i.imgur.com/RR5pZvH.jpg",
-  "url": "https://TejBuziups.in",
-  "sameAs": [
-    "https://www.instagram.com/tejbuziups",
-    "https://wa.me/917017270882"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "IN"
-  },
-  "description": "Print-on-demand clothing and gifts with Bhakti, Swag, Meme, Regional, and Festival themes for modern Indian youth."
-}
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TejBuziups - Home</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<!-- Hero Section -->
-<section class="hero-section">
-<div class="overlay">
-<div class="hero-content">
-<h1 class="brand-name">TejBuziups.in</h1>
-<p class="tagline">Tera Style, Teri Soch ✨</p>
-</div>
-</div>
-</section>
-<style>
-.hero-section {
-  background: url('image/banner.jpg') no-repeat center center/cover;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-}
-
-.overlay {
-  background: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.hero-content {
-  max-width: 600px;
-}
-
-.brand-name {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #ffcc00;
-  text-shadow: 2px 2px #000;
-}
-
-.tagline {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  animation: fadeInUp 2s ease;
-}
-
-.hero-buttons .btn {
-  background: #ffcc00;
-  color: #000;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 10px;
-  transition: all 0.3s ease;
-}
-
-.hero-buttons .btn:hover {
-  background: #fff;
-  color: #000;
-}
-
-.hero-buttons .btn.outline {
-  background: transparent;
-  border: 2px solid #ffcc00;
-  color: #ffcc00;
-}
-
-.hero-buttons .btn.outline:hover {
-  background: #ffcc00;
-  color: #000;
-}
-
-@keyframes fadeInUp {
-  0% {opacity: 0; transform: translateY(20px);}
-  100% {opacity: 1; transform: translateY(0);}
-}
-
-@media (max-width: 768px) {
-  .brand-name { font-size: 2rem; }
-  .tagline { font-size: 1.2rem; }
-}
- body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fdfdfd; }
-    header { background: #673ab7; color: white; padding: 1rem 1.5rem; text-align: center; }
-    header h2 { font-size: 2rem; margin: 0; }
-    header p { font-size: 1rem; margin: 0; }
-    .product-card { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 8px; background: #fff; }
-    .product-card img { width: 100%; border-radius: 6px; }
-    @media screen and (max-width: 768px) {
-      header { padding: 0.6rem 1rem; }
-      header h2 { font-size: 1.5rem; }
-      header p { font-size: 0.9rem; }
-    }
-
-</style>
 <body>
 <!-- ✅ TejBuziups Header -->
 <header style="text-align:center; padding:10px; background:#fff8f0; border-bottom:1px solid #ccc;">
   <h1 style="margin:0; font-size:28px; color:#d84315; font-family:'Poppins', sans-serif;">
     TejBuziups <span style="font-size:16px; color:#555;">– Tera Style, Teri Soch</span>
   </h1>
+  <button onclick="window.location.href='wishlist.html'" class="btn-cart">❤️ Wishlist</button>
+    <button onclick="window.location.href='cart.html'" class="btn-cart">🛒 Cart (<span id="cart-count">0</span>)</button>
 </header>
 
 <!-- ✅ Bootstrap Navbar (Responsive) -->
@@ -799,26 +25,18 @@ input[type="email"]:focus {
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-  <ul class="navbar-nav ms-auto">
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        🎨 Categories
-      </a>
-      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="categoriesDropdown">
-        <li><a class="dropdown-item" href="#bhakti">🕉️ Bhakti</a></li>
-        <li><a class="dropdown-item" href="#love">💑 Love</a></li>
-        <li><a class="dropdown-item" href="#swag">😎 Swag</a></li>
-        <li><a class="dropdown-item" href="#meme">😂 Meme</a></li>
-        <li><a class="dropdown-item" href="#kids">🧒 Kids</a></li>
-        <li><a class="dropdown-item" href="#gifts">🎁 Gifts</a></li>
-        <li><a class="dropdown-item" href="#Digital design items">🖥️ Digital</a></li>
-      </ul>
-    </li>
-  </ul>
-</div>
-</nav>
-<section style="background: linear-gradient(135deg, #fff8f0, #fff0f5); padding: 2.5rem 1rem; text-align: center; border-top: 3px dashed #d84315; margin-top: 3rem; border-radius: 12px 12px 0 0; box-shadow: 0 -5px 25px rgba(0,0,0,0.05);">
+    <nav>
+    <a href="#bhakti">🕉️ Bhakti</a>
+    <a href="#love">💑 Love</a>
+    <a href="#swag">😎 Swag</a>
+    <a href="#meme">😂 Meme</a>
+    <a href="#gifts">🎁 Gifts</a>
+    <a href="#kids">🧒 Kids</a>
+    <a href="#festivals">🌸 Festivals</a>
+    <a href="#custom">🧵 Custom</a>
+    <a href="#Digital design items">🧵 Digital</a>
+  </nav>
+  <section style="background: linear-gradient(135deg, #fff8f0, #fff0f5); padding: 2.5rem 1rem; text-align: center; border-top: 3px dashed #d84315; margin-top: 3rem; border-radius: 12px 12px 0 0; box-shadow: 0 -5px 25px rgba(0,0,0,0.05);">
   <h2 style="color: #d84315; font-family: 'Rajdhani', sans-serif; font-weight: 900; font-size: 2rem; letter-spacing: 0.05em; margin-bottom: 1rem;">
     🧵 हर प्रोडक्ट आपके हिसाब से बनेगा!
   </h2>
@@ -827,36 +45,45 @@ input[type="email"]:focus {
     <strong style="color: #a63608; font-size: 1.2rem;">"Tera Style, Teri Soch" – अब सच में आपका स्टाइल, आपकी सोच।</strong>
   </p>
 </section>
-<section id="bhakti" style="padding:4rem 2rem;"><div style="max-width:1200px; margin:auto; text-align:center;"><h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🕉️ Bhakti Zone</h2><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
-<div class="product-card" style="background:#f2f3f1; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
- <img src="./image/om namah shivay t shirt.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-<h3 style="color:#333;">Om Namah Shivaya</h3>
-<p class="product-price" style="font-weight:bold; color:#d84315;">₹459</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" style="padding: 0.85rem 1.5rem; font-size: 1.1rem;" type="button">Add to Cart</button>
-</div>
-<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
- <img src="./image/shri ram tshirt.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-<h3 style="color:#333;">Jai Shri Ram</h3>
-<p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
-</div>
-<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
- <img src="./image/shri krishn t shirt.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-<h3 style="color:#333;">Shri krishn</h3>
-<p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
-</div>
-<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+  <main>
+  <section id="bhakti" style="padding:4rem 2rem;"><div style="max-width:1200px; margin:auto; text-align:center;"><h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🕉️ Bhakti Zone</h2><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
+    <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+      <img src="./image/om namah shivay t shirt.png" alt="Om Namah Shivaya T-shirt" />
+      <h3>Om Namah Shivaya</h3>
+      <p class="product-price">₹459</p>
+      <button onclick="addToCart('Om Namah Shivaya')">Add to Cart</button>
+      <button onclick="addToWishlist('Om Namah Shivaya')">❤️ Add to Wishlist</button>
+    </div>
+
+    <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+      <img src="./image/shri ram tshirt.png" alt="Jai Shri Ram T-shirt" />
+      <h3>Jai Shri Ram</h3>
+      <p class="product-price">₹599</p>
+      <button onclick="addToCart('Jai Shri Ram')">Add to Cart</button>
+      <button onclick="addToWishlist('Jai Shri Ram')">❤️ Add to Wishlist</button>
+    </div>
+
+    <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+      <img src="./image/shri krishn t shirt.png" alt="Shri Krishna T-shirt" />
+      <h3>Shri Krishna</h3>
+      <p class="product-price">₹599</p>
+      <button onclick="addToCart('Shri Krishna')">Add to Cart</button>
+      <button onclick="addToWishlist('Shri Krishna')">❤️ Add to Wishlist</button>
+    </div>
+  
+  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/maharaj ji cup.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Maharaj ji Cup</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹409</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Maharaj ji Cup')">Add to Cart</button>
+<button onclick="addToWishlist('Maharaj ji Cup')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/om namah shivay cup.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Om Namah Shivay Cup</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹349</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Om Namah Shivay Cup')">Add to Cart</button>
+<button onclick="addToWishlist('Om Namah Shivay Cup')">❤️ Add to Wishlist</button> 
 </div>
 </div>
 </div>
@@ -864,33 +91,38 @@ input[type="email"]:focus {
 <section id="love" style="padding:4rem 2rem;"><div style="max-width:1200px; margin:auto; text-align:center;"><h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">💑 Love Couple Zone</h2><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/pati patni tshirt.jpeg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-<h3 style="color:#333;">Pati &amp; patni Set</h3>
+<h3 style="color:#333;">Pati & patni Set</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹699</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Pati & patni Set')">Add to Cart</button>
+<button onclick="addToWishlist('Pati & patni Set')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/couple tshirt.png" style="width:100%; border-radius:1rem; margin-bottom:rem;"/>
 <h3 style="color:#333;">Always Together</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹649</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Always Together')">Add to Cart</button>
+<button onclick="addToWishlist('Always Together')">❤️ Add to Wishlist</button>
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/love 2 couple.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Love in Threads</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Love in Threads')">Add to Cart</button>
+      <button onclick="addToWishlist('Love in Threads')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/King and Queen Mugs Custom Couple Mug Husband and Wife Coffee Cups Valentine's Day Gift For Couples Anniversary Gift Wedding Party Present.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">King Queen Couple Cup</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('King Queen Couple Cup')">Add to Cart</button>
+      <button onclick="addToWishlist('King Queen Couple Cup')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/mickey mouse cup.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Mickey mouse Cup</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Mickey mouse Cup')">Add to Cart</button>
+      <button onclick="addToWishlist('Mickey mouse Cup')">❤️ Add to Wishlist</button> 
 </div>
 </div>
 </div>
@@ -900,30 +132,36 @@ input[type="email"]:focus {
  <img src="./image/attendance youth swag.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Hustle Mode On</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹459</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Hustle Mode On')">Add to Cart</button>
+      <button onclick="addToWishlist('Hustle Mode On')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/scene on hai youth swag.png" style="width:90%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Scene On hai</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹459</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Scene On hai')">Add to Cart</button>
+      <button onclick="addToWishlist('Scene On hai')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/rickaw t shirt youth swag.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">rickaw swag</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹549</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('rickaw swag')">Add to Cart</button>
+      <button onclick="addToWishlist('rickaw swag')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/Funny mug, gift for him, gift for her, Best friend, funny gift, coffee mug,.jpeg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">funny meme cup</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹349</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
-</div><div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+<button onclick="addToCart('funny meme cup')">Add to Cart</button>
+      <button onclick="addToWishlist('funny meme cup')">❤️ Add to Wishlist</button> 
+</div>
+<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
 <img src="./image/Trinx Profession Quote Coffee Mug Theme_ Kidding.jpeg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Quote mug</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹349</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Quote mug')">Add to Cart</button>
+      <button onclick="addToWishlist('Quote mug')">❤️ Add to Wishlist</button>
 </div>
 </div>
 </div>
@@ -933,19 +171,22 @@ input[type="email"]:focus {
  <img src="./image/lag gaye bhai meme t shirt.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Lag gaye bhai</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹499</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Lag gaye bhai')">Add to Cart</button>
+      <button onclick="addToWishlist('Lag gaye bhai')">❤️ Add to Wishlist</button>
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/reel banau ya resume.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-<h3 style="color:#333;">reel banau ya resume</h3>
+<h3 style="color:#333;">Reel banau ya resume</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹459</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Reel banau ya resume')">Add to Cart</button>
+      <button onclick="addToWishlist('Reel banau ya resume')">❤️ Add to Wishlist</button>
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/Tumase na ho payega t shirt.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Tumase na ho payege</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹449</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Tumase na ho payege')">Add to Cart</button>
+      <button onclick="addToWishlist('Tumase na ho payege')">❤️ Add to Wishlist</button>
 </div>
 </div>
 </div>
@@ -955,25 +196,29 @@ input[type="email"]:focus {
  <img src="./image/frame.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Wooden Photo Frame</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹699</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Wooden Photo Frame')">Add to Cart</button>
+      <button onclick="addToWishlist('Wooden Photo Frame')">❤️ Add to Wishlist</button>
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/led frame.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">LED Frame</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹899</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('LED Frame')">Add to Cart</button>
+      <button onclick="addToWishlist('LED Frame')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/keychain.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">KeyChain</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹249</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('KeyChain')">Add to Cart</button>
+      <button onclick="addToWishlist('KeyChain')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/stich cup.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-<h3 style="color:#333;">stich white cup</h3>
+<h3 style="color:#333;">Stich white cup</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Stich white cup')">Add to Cart</button>
+      <button onclick="addToWishlist('Stich white cup')">❤️ Add to Wishlist</button> 
 </div>
 </div>
 </div>
@@ -983,19 +228,22 @@ input[type="email"]:focus {
  <img src="./image/superkid tee.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">SuperKid Tee</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('SuperKid Tee')">Add to Cart</button>
+      <button onclick="addToWishlist('SuperKid Tee')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/little dino.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">little Dino</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹449</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('little Dino')">Add to Cart</button>
+      <button onclick="addToWishlist('little Dino')">❤️ Add to Wishlist</button>
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/birthday tshirt kid.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">birthday 1st</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('birthday 1st')">Add to Cart</button>
+      <button onclick="addToWishlist('birthday 1st')">❤️ Add to Wishlist</button>
 </div>
 </div>
 </div>
@@ -1005,19 +253,22 @@ input[type="email"]:focus {
  <img src="./image/holi tee.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Holi Hai T-shirt</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Holi Hai T-shirt')">Add to Cart</button>
+      <button onclick="addToWishlist('Holi Hai T-shirt')">❤️ Add to Wishlist</button>
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/diwali tee.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Diwali Tee</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Diwali Tee')">Add to Cart</button>
+<button onclick="addToWishlist('Diwali Tee')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/janmastmi tee.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;"> Janmastmi T-Shirt</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Janmastmi T-Shirt')">Add to Cart</button>
+      <button onclick="addToWishlist('Janmastmi T-Shirt')">❤️ Add to Wishlist</button>
 </div>
 </div>
 </div>
@@ -1026,31 +277,36 @@ input[type="email"]:focus {
  <img src="./image/personilze t shirt.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Your Photo T-Shirt</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹699</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Your Photo T-Shirt')">Add to Cart</button>
+<button onclick="addToWishlist('Your Photo T-Shirt')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/mug.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Name Printed Mug</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Name Printed Mug')">Add to Cart</button>
+      <button onclick="addToWishlist('Name Printed Mug')">❤️ Add to Wishlist</button>
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/KeyCraft.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Personalized Keychain</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹249</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Personalized Keychain')">Add to Cart</button>
+<button onclick="addToWishlist('Personalized Keychain')">❤️ Add to Wishlist</button>
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/coffee cup.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Blue Coffee mug</h3>
-<p class="product-price" style="font-weight:bold; color:#d84315;">399</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
+<button onclick="addToCart('Blue Coffee mug')">Add to Cart</button>
+<button onclick="addToWishlist('Blue Coffee mug')">❤️ Add to Wishlist</button>
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/tote bag.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Tote Bag</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹199</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Tote Bag')">Add to Cart</button>
+<button onclick="addToWishlist('Tote Bag')">❤️ Add to Wishlist</button>
 </div>
 </div>
 </div>
@@ -1060,132 +316,107 @@ input[type="email"]:focus {
  <img src="./image/logo icons.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">logo Design</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹199</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('logo Design')">Add to Cart</button>
+<button onclick="addToWishlist('logo Design')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/banner icons.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Poster/Banner Design</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹299</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Poster/Banner Design')">Add to Cart</button>
+<button onclick="addToWishlist('Poster/Banner Design')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/business card.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Business Card Design</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹199</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Business Card Design')">Add to Cart</button>
+<button onclick="addToWishlist('Business Card Design')">❤️ Add to Wishlist</button>
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/website making.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Website Design</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹1999</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Website Design')">Add to Cart</button>
+<button onclick="addToWishlist('Website Design')">❤️ Add to Wishlist</button> 
 </div>
 <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
  <img src="./image/music.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
 <h3 style="color:#333;">Brand Name songs making</h3>
 <p class="product-price" style="font-weight:bold; color:#d84315;">₹499</p>
-<button class="btn-primary" onclick="orderViaWhatsApp(this)" type="button">Add to Cart</button>
+<button onclick="addToCart('Brand Name songs making')">Add to Cart</button>
+<button onclick="addToWishlist('Brand Name songs making')">❤️ Add to Wishlist</button>
 </div>
 </div>
 </div>
-</section>
-<!-- 🧧 BUNDLE DEALS SECTION -->
-<section id="bundle-deals" style="padding:3rem 1rem; background:#fff7f3;">
-<div style="max-width:1200px; margin:auto; text-align:center;">
-<h2 style="font-size:2rem; color:#d84315;">🔥 Combo &amp; Bundle Offers</h2>
-<p style="margin-bottom:2rem; color:#333;">Get more, save more! Grab these limited-time bundles:</p>
-<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem;">
-<div style="background:white; padding:1rem; border-radius:1rem; box-shadow:0 0 15px rgba(0,0,0,0.1);">
-<h3 style="color:#d84315;">💑 Couple Set + Mug</h3>
-<p>Only ₹999 (Save ₹199)</p>
-<button class="btn-primary" onclick="document.getElementById('customize-modal').style.display='flex'">Claim Combo</button>
-</div>
-<div style="background:white; padding:1rem; border-radius:1rem; box-shadow:0 0 15px rgba(0,0,0,0.1);">
-<h3 style="color:#d84315;">🕉 Bhakti Trio Pack</h3>
-<p>Any 3 Bhakti Tees @ ₹1299 + Free Om Sticker</p>
-<button class="btn-primary" onclick="document.getElementById('customize-modal').style.display='flex'">Grab Now</button>
-</div>
-</div>
-</div>
-</section>
-<section>
-<style>
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #ffe0e0, #e0ffff);
-    padding: 30px;
-    text-align: center;
-  }
+  </section>
+</main>
+  <script src="script.js"></script>
+  <section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TejBuziups Business Gift Card</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #e0f7fa);
+      text-align: center;
+    }
 
-  #cardCanvas {
-    border: 5px solid transparent;
-    border-image: linear-gradient(135deg, #ff6a00, #ee0979) 1;
-    margin: 20px auto;
-    display: block;
-    background: #fff;
-    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-  }
+    .input-container {
+      background: #ffffffdd;
+      padding: 20px 30px;
+      display: inline-block;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      backdrop-filter: blur(6px);
+      margin-bottom: 20px;
+    }
 
-  #cardCanvas:hover {
-    transform: scale(1.02);
-  }
+    input, select, button {
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 10px;
+      margin: 8px 6px;
+      border: 1px solid #ccc;
+    }
 
-  .input-container {
-    background: #ffffffc4;
-    padding: 25px 30px;
-    display: inline-block;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-    backdrop-filter: blur(4px);
-    border: 2px solid rgba(255, 105, 180, 0.15);
-    margin-bottom: 20px;
-  }
+    button {
+      background: linear-gradient(90deg, #f875aa, #fd9f9f);
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(255, 105, 135, 0.3);
+      transition: 0.3s ease;
+    }
 
-  input, select {
-    padding: 12px 16px;
-    margin: 8px 5px;
-    font-size: 16px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    outline: none;
-    transition: all 0.3s ease;
-  }
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #ff3e6c, #ff9966);
+    }
 
-  input:focus, select:focus {
-    border-color: #ff5e78;
-    box-shadow: 0 0 6px rgba(255, 105, 180, 0.3);
-  }
-
-  button {
-    padding: 12px 20px;
-    margin: 10px 6px;
-    font-size: 16px;
-    border-radius: 12px;
-    border: none;
-    background: linear-gradient(90deg, #ff5e78, #ff8a65);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 14px rgba(255, 105, 135, 0.3);
-    transition: all 0.3s ease;
-  }
-
-  button:hover {
-    background: linear-gradient(90deg, #ff3e5c, #ff7043);
-    box-shadow: 0 6px 20px rgba(255, 105, 135, 0.5);
-    transform: scale(1.03);
-  }
-</style>
+    canvas {
+      margin: 30px auto;
+      display: block;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      border: 6px solid transparent;
+      border-image: linear-gradient(45deg, #ff6a00, #ee0979) 1;
+    }
+  </style>
+</head>
 <body>
+  <h2>🌟 TejBuziups Gift Card Generator 🌟</h2>
 
-<h2>🌟 TejBuziups Gift Card Generator 🌟</h2>
-
-<div class="input-container">
-  <input type="text" id="nameInput" placeholder="Aapka Naam likho" />
-  <input type="file" id="photoInput" accept="image/*" onchange="loadImage(event)" />
-  <select id="themeSelect">
+  <div class="input-container">
+    <input type="text" id="nameInput" placeholder="Apka Naam likho" />
+    <input type="file" id="photoInput" accept="image/*" onchange="loadImage(event)" />
+    <select id="themeSelect">
     <option value="romantic">Romantic Rose</option>
     <option value="birthday">Birthday Balloons</option>
     <option value="bhakti">Floral Bhakti</option>
@@ -1197,26 +428,20 @@ input[type="email"]:focus {
     <option value="goodluck">Good Luck Spark</option>
     <option value="apology">Apology Note</option>
     <option value="goodmorning">Good Morning Sunshine</option>
-  </select>
-  <br/>
-  <button onclick="generateCard()">Generate</button>
-  <button onclick="downloadCard()">Download Image</button>
-  <button onclick="shareOnWhatsApp()">Share on WhatsApp</button>
-</div>
+  </select><br/>
+    <button onclick="generateCard()">Generate</button>
+    <button onclick="downloadCard()">Download</button>
+    <button onclick="shareOnWhatsApp()">WhatsApp Share</button>
+  </div>
 
-<canvas id="cardCanvas" width="600" height="580"></canvas>
+  <canvas id="cardCanvas" width="700" height="400"></canvas>
 
-<p><em>Made with ❤️ by TejBuziups – Tera Style, Teri Soch</em></p>
+  <script>
+    const canvas = document.getElementById('cardCanvas');
+    const ctx = canvas.getContext('2d');
+    let uploadedImage = null;
 
-<script>
-const canvas = document.getElementById("cardCanvas");
-const ctx = canvas.getContext("2d");
-let uploadedImage = null;
-
-const qrImage = new Image();
-qrImage.src = "tejbuziups_card_qr.png"; // place this file in the same folder
-
-const messages = {
+    const messages = {
   romantic: "Teri Muskaan, Meri Pehchaan — TejBuziups ke is tohfe mein hai tera naam.",
   birthday: "Happy Birthday! Yeh tohfa tere naam, TejBuziups ke pyaar ke saath.",
   bhakti: "Bhagwan ki kripa aur TejBuziups ka pyaar — dono tere saath ho hamesha.",
@@ -1228,231 +453,108 @@ const messages = {
   goodluck: "Nayi shuruaat ho ya exam — TejBuziups ki taraf se Good Luck!",
   apology: "Kabhi kabhi ek sorry bhi kaafi hota hai — TejBuziups ke pyaar bhare andaaz mein.",
   goodmorning: "Subah ki ek muskaan, din bhar ki taaqat — Good Morning from TejBuziups!"
-};
+    };
 
-function wrapTextGradient(ctx, text, x, y, maxWidth, lineHeight) {
-  const words = text.split(" ");
-  let line = "", offset = 0;
-  for (let n = 0; n < words.length; n++) {
-    const testLine = line + words[n] + ' ';
-    if (ctx.measureText(testLine).width > maxWidth && n > 0) {
-      const grd = ctx.createLinearGradient(x, y + offset, x + maxWidth, y + offset);
-      grd.addColorStop(0, "#ff8a00");
-      grd.addColorStop(1, "#da1b60");
-      ctx.fillStyle = grd;
+    const qrImage = new Image();
+    qrImage.src = "tejbuziups_card_qr.png";
+
+    function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+      const words = text.split(" ");
+      let line = '', offset = 0;
+      for (let i = 0; i < words.length; i++) {
+        let testLine = line + words[i] + ' ';
+        if (ctx.measureText(testLine).width > maxWidth && i > 0) {
+          ctx.fillText(line, x, y + offset);
+          line = words[i] + ' ';
+          offset += lineHeight;
+        } else {
+          line = testLine;
+        }
+      }
       ctx.fillText(line, x, y + offset);
-      line = words[n] + ' ';
-      offset += lineHeight;
-    } else {
-      line = testLine;
     }
-  }
-  const grd = ctx.createLinearGradient(x, y + offset, x + maxWidth, y + offset);
-  grd.addColorStop(0, "#43cea2");
-  grd.addColorStop(1, "#185a9d");
-  ctx.fillStyle = grd;
-  ctx.fillText(line, x, y + offset);
-}
 
-function loadImage(event) {
-  const reader = new FileReader();
-  reader.onload = function () {
-    uploadedImage = new Image();
-    uploadedImage.onload = () => generateCard();
-    uploadedImage.src = reader.result;
-  };
-  reader.readAsDataURL(event.target.files[0]);
-}
+    function loadImage(event) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        uploadedImage = new Image();
+        uploadedImage.onload = () => generateCard();
+        uploadedImage.src = reader.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
 
-function generateCard() {
-  const name = document.getElementById("nameInput").value || "Dost";
-  const theme = document.getElementById("themeSelect").value;
+    function generateCard() {
+      const name = document.getElementById('nameInput').value || "Dost";
+      const theme = document.getElementById('themeSelect').value;
+      const msg = themes[theme];
 
-  // Gradient background
-  const bgGradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-  bgGradient.addColorStop(0, "#fff3e0");
-  bgGradient.addColorStop(1, "#ffe0f7");
-  ctx.fillStyle = bgGradient;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Gradient Background
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      gradient.addColorStop(0, "#fdfcfb");
+      gradient.addColorStop(1, "#e2d1c3");
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Ribbon border
-  ctx.strokeStyle = "#ff69b4";
-  ctx.lineWidth = 12;
-  ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);
+      // Decorative effects
+      ctx.fillText("✨🦋✨", 620, 40);
+      ctx.fillText("⛰️⛰️⛰️", 300, 390);
 
-  // Emojis in corners
-  ctx.font = "26px serif";
-  ctx.fillStyle = "#f44336";
-  ctx.fillText("🌸", 25, 45);
-  ctx.fillText("🌟", canvas.width - 55, 45);
-  ctx.fillText("✨", 25, canvas.height - 25);
-  ctx.fillText("🌼", canvas.width - 55, canvas.height - 25);
+      // Border Ribbon
+      ctx.strokeStyle = "#ff69b4";
+      ctx.lineWidth = 5;
+      ctx.strokeRect(20, 20, canvas.width - 40, canvas.height - 40);
 
-  // Heading
-  ctx.font = "bold 26px Arial";
-  ctx.fillStyle = "#333";
-  ctx.fillText("TejBuziups Gift Card", 160, 60);
+      // Circular Photo
+      if (uploadedImage) {
+        const x = 50, y = 100, radius = 50;
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(x + radius, y + radius, radius, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.clip();
+        ctx.drawImage(uploadedImage, x, y, radius * 2, radius * 2);
+        ctx.restore();
+      }
 
-  // Name
-  ctx.font = "20px serif";
-  ctx.fillText(`To: ${name}`, 60, 100);
+      // Name & Message
+      ctx.font = "24px 'Segoe UI'";
+      ctx.fillStyle = "#444";
+      ctx.fillText(`To: ${name}`, 140, 120);
 
-  // User photo (circular) — now below name and above message
-  if (uploadedImage) {
-    const x = 260, y = 120, radius = 50;
-    ctx.save();
-    ctx.beginPath();
-    ctx.arc(x + radius, y + radius, radius, 0, Math.PI * 2);
-    ctx.closePath();
-    ctx.clip();
-    ctx.drawImage(uploadedImage, x, y, radius * 2, radius * 2);
-    ctx.restore();
-    ctx.strokeStyle = "#666";
-    ctx.lineWidth = 2;
-    ctx.stroke();
-  }
+      ctx.font = "18px 'Segoe UI'";
+      ctx.fillStyle = "#ee0979";
+      wrapText(ctx, msg, 140, 170, 500, 30);
 
-  // Message
-  ctx.font = "20px 'Segoe UI'";
-  wrapTextGradient(ctx, messages[theme], 60, 240, 480, 30);
+      // Footer & QR
+      ctx.font = "14px monospace";
+      ctx.fillStyle = "#000";
+      ctx.fillText("www.tejbuziups.in — Tera Style, Teri Soch", 200, 370);
 
-  // Footer
-  ctx.font = "16px monospace";
-  ctx.fillStyle = "#000";
-  ctx.fillText("Tera Style, Teri Soch – www.tejbuziups.in", 60, 360);
+      if (qrImage.complete) {
+        ctx.drawImage(qrImage, 570, 270, 100, 100);
+      } else {
+        qrImage.onload = () => ctx.drawImage(qrImage, 570, 270, 100, 100);
+      }
+    }
 
-  // QR code
-  if (qrImage.complete) {
-    ctx.drawImage(qrImage, 230, 390, 140, 140);
-  } else {
-    qrImage.onload = () => ctx.drawImage(qrImage, 230, 390, 140, 140);
-  }
-}
+    function downloadCard() {
+      const link = document.createElement('a');
+      link.download = 'TejBuziups_Business_Card.png';
+      link.href = canvas.toDataURL();
+      link.click();
+    }
 
-function downloadCard() {
-  const link = document.createElement("a");
-  link.download = "tejbuziups-gift-card.png";
-  link.href = canvas.toDataURL();
-  link.click();
-}
-  function shareOnWhatsApp() {
-    const name = document.getElementById('nameInput').value || "Dost";
-    const message = `🎁 TejBuziups Gift Card for ${name}!
-Create yours at: https://www.tejbuziups.in/gift-card`;
-    const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-  }
-</script>
-
+    function shareOnWhatsApp() {
+      const name = document.getElementById('nameInput').value || "Dost";
+      const msg = `🎁 Your TejBuziups Gift Card is ready!\nGet yours at: www.tejbuziups.in/gift-card`;
+      window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, "_blank");
+    }
+  </script>
 </body>
+</html>
 </section>
-<!-- 🌟 ORDER CUSTOMIZATION MODAL -->
-<div id="customize-modal">
-  <div class="modal-box">
-    <h2 style="text-align:center; margin-bottom:20px;">🛍️ Order Customization</h2>
-
-    <label>Product Name</label>
-    <input id="cust-product" class="form-control" readonly>
-
-    <label>Your Name *</label>
-    <input id="cust-name" class="form-control" placeholder="Enter your name" required>
-
-    <label>Mobile Number *</label>
-    <input id="cust-mobile" class="form-control" placeholder="Enter your mobile number" required type="tel">
-
-    <label>Select Size:</label>
-    <select id="cust-size" class="form-control" required>
-      <option value="">--Select Size--</option>
-      <option>S</option><option>M</option><option>L</option>
-      <option>XL</option><option>XXL</option>
-    </select>
-
-    <label>Select Color:</label>
-    <select id="cust-color" class="form-control" required>
-      <option value="">--Select Color--</option>
-      <option>Black</option><option>White</option><option>Red</option>
-      <option>Navy Blue</option><option>Maroon</option><option>Olive Green</option>
-    </select>
-
-    <label>Quantity:</label>
-    <input type="number" id="cust-qty" class="form-control" value="1" min="1" max="10" required>
-
-    <label>Address *</label>
-    <textarea id="cust-address" class="form-control" placeholder="Enter delivery address" required></textarea>
-
-    <label>Note (Optional)</label>
-    <textarea id="cust-note" class="form-control" placeholder="Any special instructions"></textarea>
-
-    <button onclick="sendWhatsAppOrder()" class="btn-send">📩 Send Order via WhatsApp</button>
-    <button onclick="closeModal()" class="btn-cancel">❌ Cancel</button>
-  </div>
-</div>
-</div>
-<!-- 📲 WHATSAPP + MODAL SCRIPT -->
-<script>
-  // Show modal and set product name on Add to Cart click
-  document.querySelectorAll('.btn-primary').forEach(button => {
-    button.addEventListener('click', (e) => {
-      const card = e.target.closest('.product-card') || e.target.closest('div');
-      const productName = card.querySelector('h3')?.innerText || "Product";
-      document.getElementById('cust-product').value = productName;
-      document.getElementById('customize-modal').style.display = 'flex';
-    });
-  });
-
-  // Close modal function
-  function closeModal() {
-    document.getElementById('customize-modal').style.display = 'none';
-  }
-
-  // Send WhatsApp order with validation
-  function sendWhatsAppOrder() {
-    const name = document.getElementById('cust-name').value.trim();
-    const mobile = document.getElementById('cust-mobile').value.trim();
-    const size = document.getElementById('cust-size').value;
-    const color = document.getElementById('cust-color').value;
-    const qty = parseInt(document.getElementById('cust-qty').value);
-    const address = document.getElementById('cust-address').value.trim();
-    const note = document.getElementById('cust-note').value.trim();
-    const product = document.getElementById('cust-product').value.trim();
-
-    const allowedSizes = ["S","M", "L", "XL", "XXL"];
-
-    if (!name || !size || !mobile || !qty || !address) {
-      alert('Please fill in all required fields.');
-      return;
-    }
-
-    if (!allowedSizes.includes(size)) {
-      alert("Please select a valid size (S,M, L, XL, XXL).");
-      return;
-    }
-
-    if (qty < 1 || qty > 10) {
-      alert("Quantity must be between 1 and 10.");
-      return;
-    }
-    const message = 
-      `🛍 *New Tejbuziups Order*%0A` +
-      `👤 *Name:* ${name}%0A` +
-      `📱 *Mobile:* ${mobile}%0A` +
-      `📦 *Product:* ${product}%0A` +
-      `📏 *Size:* ${size}%0A` +
-      `🎨 *Color:* ${color}%0A` +
-      `🔢 *Quantity:* ${qty}%0A` +
-      `🏠 *Address:* ${address}%0A` +
-      (note ? `📝 *Note:* ${note}%0A` : '') +
-    `👋 *Thanks!*%0A`;
-      `💳 Please confirm and share payment details.`;
-
-    const whatsappNumber = '917017270882';
-    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${message}`;
-
-    window.open(whatsappLink, '_blank');
-    closeModal();
-  }
-</script>
-<footer>
+  <footer>
   <div class="footer-content" style="text-align: center;">
     <p>© 2025 <strong style="color: #ffd9d2;">TejBuziups</strong>. All rights reserved.</p>
     <p>🧵 Crafted with care, faith, and desi tradition.</p>
@@ -1471,7 +573,7 @@ Create yours at: https://www.tejbuziups.in/gift-card`;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TejBot Chat Widget</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="botstyle.css" />
 </head>
 <body>
 
@@ -1492,5 +594,6 @@ Create yours at: https://www.tejbuziups.in/gift-card`;
 </div>
 
 <script src="tejbot.js"></script>
-  </body>
+
+</body>
 </html>

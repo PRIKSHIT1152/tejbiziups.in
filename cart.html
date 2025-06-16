@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TejBuziups Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+    }
+    h2, h3 {
+      color: #333;
+    }
+    #order-section {
+      background: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .btn-cart {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ff6600;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background: #fff;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 6px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    li img {
+      width: 60px;
+      border-radius: 4px;
+    }
+    .remove-btn, .qty-btn {
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      margin-left: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .qty-btn {
+      background: #ffa500;
+    }
+  </style>
+</head>
+<body>
+  <h2>🛒 Your Cart</h2>
+  <ul id="cart-list"></ul>
+  <h3 id="total"></h3>
+
+  <button onclick="toggleForm()" class="btn-cart">📲 Order via WhatsApp</button>
+
+  <div id="order-section" style="display: none;">
+    <h2>📋 Customer Details</h2>
+    <form id="order-form">
+      <label>Your Name *</label>
+      <input id="cust-name" placeholder="Enter your name" required>
+
+      <label>Mobile *</label>
+      <input type="text" id="cust-phone" pattern="\d{10}" maxlength="10" required>
+
+      <label>Email *</label>
+      <input type="email" id="cust-email" required>
+
+      <label>Size (Optional)</label>
+      <select id="cust-size">
+        <option value="">-- Select --</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option>
+      </select>
+
+      <label>Color (Optional)</label>
+      <select id="cust-color">
+      <option value="">--Select product Color--</option>
+      <option>Black</option><option>White</option><option>Red</option>
+      <option>Navy Blue</option><option>Maroon</option><option>Olive Green</option>
+    </select>
+      <label>Address *</label>
+      <textarea id="cust-address" required></textarea>
+
+      <label>Note (Optional)</label>
+      <textarea id="cust-note"></textarea>
+
+      <button type="submit" class="btn-cart">✅ Submit & Send on WhatsApp</button>
+    </form>
+  </div>
+
+  <script>
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    const cartList = document.getElementById("cart-list");
+    const totalEl = document.getElementById("total");
+
+    function renderCart() {
+  cartList.innerHTML = "";
+  let total = 0;
+
+  cartItems.forEach((item, index) => {
+    const li = document.createElement("li");
+
+    li.innerHTML = `
+      <img src="${item.image}" alt="${item.name}" style="width:80px; height:auto; border-radius:8px; margin-bottom:5px;" />
+      <br><strong>${item.name}</strong> - ₹${item.price} x ${item.qty || 1} = ₹${item.price * (item.qty || 1)}
+      <br>Size: ${item.size || "N/A"}, Color: ${item.color || "N/A"}
+    `;
+
+    const plusBtn = document.createElement("button");
+    plusBtn.textContent = "+";
+    plusBtn.className = "qty-btn";
+    plusBtn.onclick = () => {
+      item.qty = (item.qty || 1) + 1;
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      renderCart();
+    };
+
+    const minusBtn = document.createElement("button");
+    minusBtn.textContent = "-";
+    minusBtn.className = "qty-btn";
+    minusBtn.onclick = () => {
+      item.qty = (item.qty || 1) - 1;
+      if (item.qty <= 0) item.qty = 1;
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      renderCart();
+    };
+
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "Remove";
+    removeBtn.className = "remove-btn";
+    removeBtn.onclick = () => {
+      cartItems.splice(index, 1);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      renderCart();
+    };
+
+    li.appendChild(minusBtn);
+    li.appendChild(plusBtn);
+    li.appendChild(removeBtn);
+    cartList.appendChild(li);
+
+    total += item.price * (item.qty || 1);
+  });
+
+  totalEl.textContent = "Total: ₹" + total;
+}
+
+    renderCart();
+
+    function toggleForm() {
+      const section = document.getElementById("order-section");
+      section.style.display = section.style.display === "none" ? "block" : "none";
+    }
+
+    document.getElementById("order-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("cust-name").value;
+      const phone = document.getElementById("cust-phone").value;
+      const email = document.getElementById("cust-email").value;
+      const size = document.getElementById("cust-size").value;
+      const color = document.getElementById("cust-color").value;
+      const address = document.getElementById("cust-address").value;
+      const note = document.getElementById("cust-note").value;
+
+      const orderDetails = cartItems.map(i =>
+        `🖼️ *${i.name}*\n📷 ${window.location.origin}/${i.image}\n💵 ₹${i.price} x ${i.qty || 1} = ₹${i.price * (i.qty || 1)}\n📐 Size: ${i.size || "N/A"}, 🎨 Color: ${i.color || "N/A"}`
+      ).join("\n\n");
+
+      let total = cartItems.reduce((sum, i) => sum + i.price * (i.qty || 1), 0);
+
+      const message = `📦 *New TejBuziups Order*\n\n${orderDetails}\n\n💰 *Total:* ₹${total}\n\n👤 *Customer Info:*\n📛 Name: ${name}\n📞 Phone: ${phone}\n📧 Email: ${email}\n📐 Size: ${size || "N/A"}\n🎨 Color: ${color || "N/A"}\n🏠 Address: ${address}\n📝 Note: ${note || "N/A"}`;
+
+      const whatsappURL = `https://wa.me/917017270882?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, "_blank");
+    });
+  </script>
+</body>
+</html>

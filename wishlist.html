@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Wishlist</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h2>My Wishlist</h2>
+  <ul id="wishlist-list"></ul>
+
+  <script>
+    let wishlistItems = JSON.parse(localStorage.getItem("wishlistItems")) || [];
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const wishlistList = document.getElementById("wishlist-list");
+
+    function updateWishlist() {
+      wishlistList.innerHTML = '';
+      wishlistItems.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          ${item.name} - ₹${item.price} | Size: ${item.size}, Color: ${item.color}
+          <button onclick="moveToCart(${index})">🛒 Move to Cart</button>
+        `;
+        wishlistList.appendChild(li);
+      });
+    }
+
+    function moveToCart(index) {
+      const item = wishlistItems[index];
+      cartItems.push(item);
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+      wishlistItems.splice(index, 1);
+      localStorage.setItem("wishlistItems", JSON.stringify(wishlistItems));
+      updateWishlist();
+      alert("Item moved to cart!");
+    }
+
+    updateWishlist();
+  </script>
+</body>
+</html>
