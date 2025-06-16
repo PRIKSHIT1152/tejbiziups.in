@@ -126,7 +126,6 @@
     li.innerHTML = `
       <img src="${item.image}" alt="${item.name}" style="width:80px; height:auto; border-radius:8px; margin-bottom:5px;" />
       <br><strong>${item.name}</strong> - ₹${item.price} x ${item.qty || 1} = ₹${item.price * (item.qty || 1)}
-      <br>Size: ${item.size || "N/A"}, Color: ${item.color || "N/A"}
     `;
 
     const plusBtn = document.createElement("button");

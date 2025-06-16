@@ -65,29 +65,32 @@
     top: 0;
     z-index: 100;
   }
-  .logo a {
-    font-size: 2.25rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    font-family: 'Rajdhani', sans-serif;
-    color: var(--text-light);
-    user-select: none;
-    opacity: 0;
-    animation: fadeSlideDown 1s ease forwards;
-  }
-  .tagline {
-    font-style: italic;
-    font-weight: 600;
-    font-family: 'Brush Script MT', cursive, Arial, sans-serif;
-    font-size: 1.2rem;
-    margin-left: 2rem;
-    color: var(--accent);
-    flex-grow: 1;
-    text-align: center;
-    user-select: none;
-    opacity: 0;
-    animation: fadeSlideDown 1.2s ease forwards;
-  }
+  .main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #ff6f61, #ffa751);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.logo-img {
+  height: 50px;
+  border-radius: 8px;
+}
+
+.main-header h1 {
+  flex: 1;
+  color: white;
+  font-size: 28px;
+  margin-left: 20px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
   
   nav {
     background: linear-gradient(to right, #ffd6e0, #e0f7fa);
