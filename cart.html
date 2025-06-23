@@ -50,10 +50,7 @@
       gap: 10px;
       align-items: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    li img {
-      width: 60px;
-      border-radius: 4px;
+      flex-wrap: wrap;
     }
     .remove-btn, .qty-btn {
       background: red;
@@ -74,7 +71,8 @@
   <ul id="cart-list"></ul>
   <h3 id="total"></h3>
 
-  <button onclick="toggleForm()" class="btn-cart">📲 Order via WhatsApp</button>
+  <button onclick="toggleForm()" class="btn-cart" id="whatsapp-btn">📲 Order via WhatsApp</button>
+  <button onclick="clearCart()" class="btn-cart" style="background:red">🗑 Clear Cart</button>
 
   <div id="order-section" style="display: none;">
     <h2>📋 Customer Details</h2>
@@ -96,10 +94,11 @@
 
       <label>Color (Optional)</label>
       <select id="cust-color">
-      <option value="">--Select product Color--</option>
-      <option>Black</option><option>White</option><option>Red</option>
-      <option>Navy Blue</option><option>Maroon</option><option>Olive Green</option>
-    </select>
+        <option value="">--Select product Color--</option>
+        <option>Black</option><option>White</option><option>Red</option>
+        <option>Navy Blue</option><option>Maroon</option><option>Olive Green</option>
+      </select>
+
       <label>Address *</label>
       <textarea id="cust-address" required></textarea>
 
@@ -112,66 +111,84 @@
 
   <script>
     let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
     const cartList = document.getElementById("cart-list");
     const totalEl = document.getElementById("total");
+    const whatsappBtn = document.getElementById("whatsapp-btn");
 
     function renderCart() {
-  cartList.innerHTML = "";
-  let total = 0;
+      cartList.innerHTML = "";
+      let total = 0;
 
-  cartItems.forEach((item, index) => {
-    const li = document.createElement("li");
+      if (cartItems.length === 0) {
+        cartList.innerHTML = '<li>Your cart is empty.🛍️</li>';
+        totalEl.textContent = '';
+        document.getElementById("order-section").style.display = "none";
+        whatsappBtn.disabled = true;
+        return;
+      }
 
-    li.innerHTML = `
-      <img src="${item.image}" alt="${item.name}" style="width:80px; height:auto; border-radius:8px; margin-bottom:5px;" />
-      <br><strong>${item.name}</strong> - ₹${item.price} x ${item.qty || 1} = ₹${item.price * (item.qty || 1)}
-    `;
+      whatsappBtn.disabled = false;
 
-    const plusBtn = document.createElement("button");
-    plusBtn.textContent = "+";
-    plusBtn.className = "qty-btn";
-    plusBtn.onclick = () => {
-      item.qty = (item.qty || 1) + 1;
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      renderCart();
-    };
+      cartItems.forEach((item, index) => {
+        const li = document.createElement("li");
 
-    const minusBtn = document.createElement("button");
-    minusBtn.textContent = "-";
-    minusBtn.className = "qty-btn";
-    minusBtn.onclick = () => {
-      item.qty = (item.qty || 1) - 1;
-      if (item.qty <= 0) item.qty = 1;
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      renderCart();
-    };
+        li.innerHTML = `
+          <div>
+            <strong>${item.name}</strong><br>
+            ₹${item.price} x ${item.qty || 1} = ₹${item.price * (item.qty || 1)}
+          </div>
+        `;
 
-    const removeBtn = document.createElement("button");
-    removeBtn.textContent = "Remove";
-    removeBtn.className = "remove-btn";
-    removeBtn.onclick = () => {
-      cartItems.splice(index, 1);
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      renderCart();
-    };
+        const plusBtn = document.createElement("button");
+        plusBtn.textContent = "+";
+        plusBtn.className = "qty-btn";
+        plusBtn.onclick = () => {
+          item.qty = (item.qty || 1) + 1;
+          localStorage.setItem("cartItems", JSON.stringify(cartItems));
+          renderCart();
+        };
 
-    li.appendChild(minusBtn);
-    li.appendChild(plusBtn);
-    li.appendChild(removeBtn);
-    cartList.appendChild(li);
+        const minusBtn = document.createElement("button");
+        minusBtn.textContent = "-";
+        minusBtn.className = "qty-btn";
+        minusBtn.onclick = () => {
+          item.qty = (item.qty || 1) - 1;
+          if (item.qty <= 0) item.qty = 1;
+          localStorage.setItem("cartItems", JSON.stringify(cartItems));
+          renderCart();
+        };
 
-    total += item.price * (item.qty || 1);
-  });
+        const removeBtn = document.createElement("button");
+        removeBtn.textContent = "Remove";
+        removeBtn.className = "remove-btn";
+        removeBtn.onclick = () => {
+          cartItems.splice(index, 1);
+          localStorage.setItem("cartItems", JSON.stringify(cartItems));
+          renderCart();
+        };
 
-  totalEl.textContent = "Total: ₹" + total;
-}
+        li.appendChild(minusBtn);
+        li.appendChild(plusBtn);
+        li.appendChild(removeBtn);
+        cartList.appendChild(li);
 
-    renderCart();
+        total += item.price * (item.qty || 1);
+      });
+
+      totalEl.textContent = "Total: ₹" + total;
+    }
 
     function toggleForm() {
       const section = document.getElementById("order-section");
       section.style.display = section.style.display === "none" ? "block" : "none";
+    }
+
+    function clearCart() {
+      if (confirm("Are you sure you want to clear the cart?")) {
+        localStorage.removeItem("cartItems");
+        cartItems = [];
+        renderCart();
+      }
     }
 
     document.getElementById("order-form").addEventListener("submit", function(e) {
@@ -186,7 +203,7 @@
       const note = document.getElementById("cust-note").value;
 
       const orderDetails = cartItems.map(i =>
-        `🖼️ *${i.name}*\n📷 ${window.location.origin}/${i.image}\n💵 ₹${i.price} x ${i.qty || 1} = ₹${i.price * (i.qty || 1)}\n📐 Size: ${i.size || "N/A"}, 🎨 Color: ${i.color || "N/A"}`
+        `🖼️ *${i.name}*\n💵 ₹${i.price} x ${i.qty || 1} = ₹${i.price * (i.qty || 1)}\n📐 Size: ${i.size || size || "N/A"}, 🎨 Color: ${i.color || color || "N/A"}`
       ).join("\n\n");
 
       let total = cartItems.reduce((sum, i) => sum + i.price * (i.qty || 1), 0);
@@ -196,6 +213,8 @@
       const whatsappURL = `https://wa.me/917017270882?text=${encodeURIComponent(message)}`;
       window.open(whatsappURL, "_blank");
     });
+
+    renderCart();
   </script>
 </body>
 </html>
