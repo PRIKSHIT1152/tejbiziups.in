@@ -38,6 +38,21 @@ function addToWishlist(productName) {
     alert("Already in Wishlist!");
   }
 }
-
+type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Store",
+  "name": "TejBuziups",
+  "image": "https://yourcdn.com/logo.png",
+  "telephone": "+917017270882",
+  "email": "tejbuziup@gmail.com",
+  "url": "https://prikshit1152.github.io/tejbuziups.in/",
+  "sameAs": ["https://instagram.com/yourhandle"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "India",
+    "postalCode": "000000"
+  }
+}
 // Initialize Cart Count on Load
 window.onload = updateCartCount;

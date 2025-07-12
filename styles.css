@@ -253,22 +253,26 @@
       justify-content: center;
     }
     .product-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 16px;
-      width: 250px;
-      text-align: center;
-    }
-    .product-card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .product-price {
-      font-weight: bold;
-      color: #d84315;
-      margin: 8px 0;
-    }
+  background: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+.product-card:hover {
+  transform: scale(1.02);
+}
+.product-price {
+  font-weight: bold;
+  color: #d84315;
+}
+.section-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #d84315;
+  font-weight: bold;
+}
     .product-card button {
       margin: 5px;
       padding: 10px 16px;
@@ -703,3 +707,30 @@ input[type="email"]:focus {
       margin: 0 auto 10px auto;
       border-radius: 8px;
     }
+    .cart-button {
+  padding: 10px 20px;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.cart-button:hover {
+  background: var(--secondary);
+}
+
+.qty-btn, .remove-btn {
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-weight: bold;
+}
+.qty-btn {
+  background-color: var(--secondary);
+  color: white;
+}
+.remove-btn {
+  background-color: red;
+  color: white;
+}

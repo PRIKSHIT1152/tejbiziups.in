@@ -182,6 +182,12 @@
       const section = document.getElementById("order-section");
       section.style.display = section.style.display === "none" ? "block" : "none";
     }
+    function addToCart(productName) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(productName);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(productName + " added to cart!");
+}
 
     function clearCart() {
       if (confirm("Are you sure you want to clear the cart?")) {

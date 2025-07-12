@@ -79,3 +79,28 @@ function shareGiftCard() {
   const msg = `🎁 Your gift card has been downloaded!\n📲 Open WhatsApp and upload the image to share.`;
   window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, "_blank");
 }
+// ✅ Make TejBot draggable
+(function makeTejBotDraggable() {
+  const box = document.getElementById("tejbot-box");
+  let isDragging = false, offsetX, offsetY;
+
+  box?.addEventListener("mousedown", e => {
+    isDragging = true;
+    offsetX = e.clientX - box.offsetLeft;
+    offsetY = e.clientY - box.offsetTop;
+    box.style.cursor = "move";
+  });
+
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+    if (box) box.style.cursor = "default";
+  });
+
+  document.addEventListener("mousemove", e => {
+    if (!isDragging || !box) return;
+    box.style.left = `${e.clientX - offsetX}px`;
+    box.style.top = `${e.clientY - offsetY}px`;
+    box.style.bottom = "unset";
+    box.style.right = "unset";
+  });
+})();
