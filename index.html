@@ -60,405 +60,966 @@
   </p>
 </section>
   <main>
-  <section id="bhakti" style="padding:4rem 2rem;"><div style="max-width:1200px; margin:auto; text-align:center;"><h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🕉️ Bhakti Zone</h2><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
-    <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/om namah shivay t shirt.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Om Namah Shivaya</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹459</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Om Namah Shivaya')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
+ <section id="bhakti" style="padding:4rem 2rem;">
+  <div style="max-width:1200px; margin:auto; text-align:center;">
+    <h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🕉️ Bhakti Zone</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
 
-    <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative; max-width:250px; margin:10px;">
-  <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-  <img src="./image/shri ram tshirt.png" alt="Jai Shri Ram T-shirt" style="width:100%; border-radius:1rem;"/>
-  <h3 style="margin:10px 0 5px 0;">Jai Shri Ram</h3>
-  <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-  <p style="color:#00b894; font-weight:bold; margin-bottom:10px;">🚚 Free Shipping Across India</p>
-  <button onclick="addToCart('Jai Shri Ram')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+      <!-- Om Namah Shivaya -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/om namah shivay t shirt.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Om Namah Shivaya</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹459</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Om Namah Shivaya">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Om Namah Shivaya', price: 459 })" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+      </div>
+
+      <!-- Jai Shri Ram -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative; max-width:250px; margin:10px;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/shri ram tshirt.png" alt="Jai Shri Ram T-shirt" style="width:100%; border-radius:1rem;"/>
+        <h3 style="margin:10px 0 5px 0;">Jai Shri Ram</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Jai Shri Ram">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
 
-<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative; max-width:250px; margin:10px;">
-  <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-  <img src="./image/shri krishn t shirt.png" alt="Shri Krishna T-shirt" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-  <h3 style="margin:10px 0 5px 0;">Shri Krishna</h3>
-  <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-  <p style="color:#00b894; font-weight:bold; margin-bottom:10px;">🚚 Free Shipping Across India</p>
-  <button onclick="addToCart('Shri Krishna')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+        <p style="color:#00b894; font-weight:bold; margin-bottom:10px;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Jai Shri Ram', price: 599 })" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+      </div>
+
+      <!-- Shri Krishna -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative; max-width:250px; margin:10px;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/shri krishn t shirt.png" alt="Shri Krishna T-shirt" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="margin:10px 0 5px 0;">Shri Krishna</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Shri Krishna">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
 
-<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative; max-width:250px; margin:10px;">
-  <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-  <img src="./image/maharaj ji cup.png" alt="Maharaj ji Cup" style="width:100%; border-radius:1rem;"/>
-  <h3 style="margin:10px 0 5px 0;">Maharaj ji Cup</h3>
-  <p class="product-price" style="font-weight:bold; color:#d84315;">₹409</p>
-  <p style="color:#00b894; font-weight:bold; margin-bottom:10px;">🚚 Free Shipping Across India</p>
-  <button onclick="addToCart('Maharaj ji Cup')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+        <p style="color:#00b894; font-weight:bold; margin-bottom:10px;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Shri Krishna', price: 599 })" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+      </div>
+
+      <!-- Maharaj ji Cup -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative; max-width:250px; margin:10px;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/maharaj ji cup.png" alt="Maharaj ji Cup" style="width:100%; border-radius:1rem;"/>
+        <h3 style="margin:10px 0 5px 0;">Maharaj ji Cup</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹409</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Maharaj ji Cup">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
 
-<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative; max-width:250px; margin:10px;">
-  <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-  <img src="./image/om namah shivay cup.png" alt="Om Namah Shivay Cup" style="width:100%; border-radius:1rem;"/>
-  <h3 style="margin:10px 0 5px 0;">Om Namah Shivay Cup</h3>
-  <p class="product-price" style="font-weight:bold; color:#d84315;">₹349</p>
-  <p style="color:#00b894; font-weight:bold; margin-bottom:10px;">🚚 Free Shipping Across India</p>
-  <button onclick="addToCart('Om Namah Shivay Cup')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+        <p style="color:#00b894; font-weight:bold; margin-bottom:10px;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Maharaj ji Cup', price: 409 })" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+      </div>
+
+      <!-- Om Namah Shivay Cup -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative; max-width:250px; margin:10px;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/om namah shivay cup.png" alt="Om Namah Shivay Cup" style="width:100%; border-radius:1rem;"/>
+        <h3 style="margin:10px 0 5px 0;">Om Namah Shivay Cup</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹349</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Om Namah Shivay Cup">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
 
-</section>
-<section id="love" style="padding:4rem 2rem;"><div style="max-width:1200px; margin:auto; text-align:center;"><h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">💑 Love Couple Zone</h2><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
-<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:2rem;">
+        <p style="color:#00b894; font-weight:bold; margin-bottom:10px;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Om Namah Shivay Cup', price: 349 })" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+      </div>
 
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/pati patni tshirt.jpeg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Pati & Patni Set</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹699</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Pati & patni Set')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/couple tshirt.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Always Together</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹649</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Always Together')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/love 2 couple.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Love in Threads</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Love in Threads')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/King and Queen Mugs Custom Couple Mug Husband and Wife Coffee Cups Valentine's Day Gift For Couples Anniversary Gift Wedding Party Present.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">King Queen Couple Cup</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('King Queen Couple Cup')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/mickey mouse cup.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Mickey Mouse Cup</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Mickey mouse Cup')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
-
-</div>
-</section>
-<section id="swag" style="padding:4rem 2rem;"><div style="max-width:1200px; margin:auto; text-align:center;"><h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">😎 Youth Swag Zone</h2><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
-<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:2rem;">
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/attendance youth swag.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Hustle Mode On</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹459</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Hustle Mode On')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/scene on hai youth swag.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Scene On hai</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹459</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Scene On hai')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/rickaw t shirt youth swag.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Rickshaw Swag</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹549</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('rickaw swag')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/Funny mug, gift for him, gift for her, Best friend, funny gift, coffee mug,.jpeg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Funny Meme Cup</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹349</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('funny meme cup')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/Trinx Profession Quote Coffee Mug Theme_ Kidding.jpeg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Quote Mug</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹349</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Quote mug')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
-
-</div>
-</section>
-<section id="meme" style="padding:4rem 2rem;"><div style="max-width:1200px; margin:auto; text-align:center;"><h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">😂 Meme Zone</h2><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
-<!-- Updated Meme Zone Product Cards with Free Shipping -->
-
-<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:2rem;">
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/lag gaye bhai meme t shirt.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Lag gaye bhai</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹499</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Lag gaye bhai')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/reel banau ya resume.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Reel banau ya resume</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹459</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Reel banau ya resume')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
-  </div>
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/Tumase na ho payega t shirt.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Tumase na ho payege</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹449</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Tumase na ho payege')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+    </div>
   </div>
 </section>
-<section id="gifts" style="padding:4rem 2rem;"><div style="max-width:1200px; margin:auto; text-align:center;"><h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🎁 Featured Custom Gifts</h2><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
-<!-- Updated Meme Zone Product Cards with Free Shipping -->
 
-<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:2rem;">
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/frame.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Wooden Photo Frame</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹699</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Wooden Photo Frame')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+<section id="love" style="padding:4rem 2rem;">
+  <div style="max-width:1200px; margin:auto; text-align:center;">
+    <h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">💑 Love Couple Zone</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem; padding:2rem;">
+
+      <!-- Pati & Patni Set -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/pati patni tshirt.jpeg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Pati & Patni Set</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹699</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Pati & Patni Set">
+    ★★★★★
   </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
 
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/led frame.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">LED Frame</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹899</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('LED Frame')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Pati & Patni Set', price: 699 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Always Together -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/couple tshirt.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Always Together</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹649</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Always Together">
+    ★★★★★
   </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
 
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/keychain.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">KeyChain</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹249</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('KeyChain')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Always Together', price: 649 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Love in Threads -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/love 2 couple.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Love in Threads</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Love in Threads">
+    ★★★★★
   </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
 
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/stich cup.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Stich white cup</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Stich white cup')" style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">🛒 Add to Cart</button>
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Love in Threads', price: 599 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- King Queen Couple Cup -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/King and Queen Mugs Custom Couple Mug Husband and Wife Coffee Cups Valentine's Day Gift For Couples Anniversary Gift Wedding Party Present.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">King Queen Couple Cup</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="King Queen Couple Cup">
+    ★★★★★
   </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
 
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'King Queen Couple Cup', price: 599 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Mickey Mouse Cup -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/mickey mouse cup.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Mickey Mouse Cup</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Mickey Mouse Cup">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Mickey Mouse Cup', price: 599 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </div>
 </section>
-<section id="kids" style="padding:4rem 2rem;"><div style="max-width:1200px; margin:auto; text-align:center;"><h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🧒 Kids Corner</h2><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
-<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/superkid tee.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">SuperKid Tee</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('SuperKid Tee')">Add to Cart</button>
-  </div>
 
-  <!-- little Dino -->
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/little dino.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">little Dino</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹449</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('little Dino')">Add to Cart</button>
-  </div>
+<section id="swag" style="padding:4rem 2rem;">
+  <div style="max-width:1200px; margin:auto; text-align:center;">
+    <h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">😎 Youth Swag Zone</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:2rem;">
 
-  <!-- birthday 1st -->
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/birthday tshirt kid.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">birthday 1st</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('birthday 1st')">Add to Cart</button>
+      <!-- Hustle Mode On -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/attendance youth swag.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Hustle Mode On</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹459</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Hustle Mode On">
+    ★★★★★
   </div>
-
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Hustle Mode On', price: 459 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Scene On Hai -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/scene on hai youth swag.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Scene On Hai</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹459</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Scene On Hai">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Scene On Hai', price: 459 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Rickshaw Swag -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/rickaw t shirt youth swag.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Rickshaw Swag</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹549</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Rickshaw Swag">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Rickshaw Swag', price: 549 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Funny Meme Cup -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/Funny mug, gift for him, gift for her, Best friend, funny gift, coffee mug,.jpeg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Funny Meme Cup</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹349</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Funny Meme Cup">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Funny Meme Cup', price: 349 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Quote Mug -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/Trinx Profession Quote Coffee Mug Theme_ Kidding.jpeg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Quote Mug</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹349</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Quote Mug">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Quote Mug', price: 349 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </div>
 </section>
-<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:2rem;">
 
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/holi tee.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Holi Hai T-shirt</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Holi Hai T-shirt')">Add to Cart</button>
+<section id="meme" style="padding:4rem 2rem;">
+  <div style="max-width:1200px; margin:auto; text-align:center;">
+    <h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">😂 Meme Zone</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:2rem;">
+
+      <!-- Lag gaye bhai -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/lag gaye bhai meme t shirt.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Lag gaye bhai</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹499</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Lag gaye bha">
+    ★★★★★
   </div>
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/diwali tee.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Diwali Tee</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Diwali Tee')">Add to Cart</button>
-  </div>
-
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/janmastmi tee.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Janmastmi T-Shirt</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Janmastmi T-Shirt')">Add to Cart</button>
-  </div>
-
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
-<section id="custom" style="padding:4rem 2rem;"><div style="max-width:1200px; margin:auto; text-align:center;"><h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🧵 Custom Design Zone</h2><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
-<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:2rem;">
 
-  <!-- Your Photo T-Shirt -->
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/personilze t shirt.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Your Photo T-Shirt</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹699</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Your Photo T-Shirt')">Add to Cart</button>
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Lag gaye bhai', price: 499 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Reel banau ya resume -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/reel banau ya resume.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Reel banau ya resume</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹459</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Reel banau ya resume">
+    ★★★★★
   </div>
-
-  <!-- Name Printed Mug -->
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/mug.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Name Printed Mug</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Name Printed Mug')">Add to Cart</button>
-  </div>
-
-  <!-- Personalized Keychain -->
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/KeyCraft.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Personalized Keychain</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹249</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Personalized Keychain')">Add to Cart</button>
-  </div>
-
-  <!-- Blue Coffee mug -->
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/coffee cup.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Blue Coffee mug</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Blue Coffee mug')">Add to Cart</button>
-  </div>
-
-  <!-- Tote Bag -->
-  <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
-    <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
-    <img src="./image/tote bag.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-    <h3 style="color:#333;">Tote Bag</h3>
-    <p class="product-price" style="font-weight:bold; color:#d84315;">₹199</p>
-    <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
-    <button onclick="addToCart('Tote Bag')">Add to Cart</button>
-  </div>
-
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Reel banau ya resume', price: 459 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Tumase na ho payega -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/Tumase na ho payega t shirt.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Tumase na ho payega</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹449</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Tumase na ho payega">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Tumase na ho payega', price: 449 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </div>
 </section>
-<section id="Digital design items" style="padding:4rem 2rem;"><div style="max-width:1200px; margin:auto; text-align:center;"><h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🧵 Digital Design items</h2><div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
-<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
- <img src="./image/logo icons.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-<h3 style="color:#333;">logo Design</h3>
-<p class="product-price" style="font-weight:bold; color:#d84315;">₹199</p>
-<button onclick="addToCart('logo Design')">Add to Cart</button>
 
+
+<section id="gifts" style="padding:4rem 2rem;">
+  <div style="max-width:1200px; margin:auto; text-align:center;">
+    <h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🎁 Featured Custom Gifts</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:2rem;">
+
+      <!-- Wooden Photo Frame -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/frame.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Wooden Photo Frame</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹699</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Wooden Photo Frame">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
-<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
- <img src="./image/banner icons.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-<h3 style="color:#333;">Poster/Banner Design</h3>
-<p class="product-price" style="font-weight:bold; color:#d84315;">₹299</p>
-<button onclick="addToCart('Poster/Banner Design')">Add to Cart</button>
- 
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Wooden Photo Frame', price: 699 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- LED Frame -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/led frame.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">LED Frame</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹899</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="LED Frame">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
-<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
- <img src="./image/business card.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-<h3 style="color:#333;">Business Card Design</h3>
-<p class="product-price" style="font-weight:bold; color:#d84315;">₹199</p>
-<button onclick="addToCart('Business Card Design')">Add to Cart</button>
- 
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'LED Frame', price: 899 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- KeyChain -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/keychain.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">KeyChain</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹249</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="KeyChain">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
-<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
- <img src="./image/website making.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-<h3 style="color:#333;">Website Design</h3>
-<p class="product-price" style="font-weight:bold; color:#d84315;">₹1999</p>
-<button onclick="addToCart('Website Design')">Add to Cart</button>
-   
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'KeyChain', price: 249 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Stich White Cup -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/stich cup.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Stich White Cup</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Stich White Cup">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
-<div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
- <img src="./image/music.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
-<h3 style="color:#333;">Brand Name songs making</h3>
-<p class="product-price" style="font-weight:bold; color:#d84315;">₹499</p>
-<button onclick="addToCart('Brand Name songs making')">Add to Cart</button>
-  
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Stich White Cup', price: 399 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="kids" style="padding:4rem 2rem;">
+  <div style="max-width:1200px; margin:auto; text-align:center;">
+    <h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🧒 Kids Corner</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
+
+      <!-- SuperKid Tee -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/superkid tee.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">SuperKid Tee</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="SuperKid Tee">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'SuperKid Tee', price: 399 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Little Dino -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/little dino.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Little Dino</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹449</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Little Dino">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Little Dino', price: 449 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Birthday 1st -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/birthday tshirt kid.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Birthday 1st</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Birthday 1st">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
 </div>
-  </section>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Birthday 1st', price: 399 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="festivals" style="padding:4rem 2rem;">
+  <div style="max-width:1200px; margin:auto; text-align:center;">
+    <h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🌸 Festivals</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
+
+      <!-- Holi Hai -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/holi tee.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;" alt="Holi Hai T-shirt"/>
+        <h3 style="color:#333;">Holi Hai T-shirt</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
+
+        <!-- ⭐ Ratings & Reviews Section -->
+        <div class="rating-section">
+          <div class="stars" data-product="Holi Hai T-shirt">★★★★★</div>
+          <textarea class="review-input" placeholder="Write your review..."></textarea>
+          <button class="submit-review">Submit Review</button>
+          <ul class="reviews-list"></ul>
+        </div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Holi Hai T-shirt', price: 599 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Diwali Tee -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/diwali tee.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;" alt="Diwali Tee"/>
+        <h3 style="color:#333;">Diwali Tee</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
+
+        <div class="rating-section">
+          <div class="stars" data-product="Diwali Tee">★★★★★</div>
+          <textarea class="review-input" placeholder="Write your review..."></textarea>
+          <button class="submit-review">Submit Review</button>
+          <ul class="reviews-list"></ul>
+        </div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Diwali Tee', price: 599 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Janmastmi -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/janmastmi tee.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;" alt="Janmastmi T-shirt"/>
+        <h3 style="color:#333;">Janmastmi T-Shirt</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹599</p>
+
+        <div class="rating-section">
+          <div class="stars" data-product="Janmastmi T-Shirt">★★★★★</div>
+          <textarea class="review-input" placeholder="Write your review..."></textarea>
+          <button class="submit-review">Submit Review</button>
+          <ul class="reviews-list"></ul>
+        </div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Janmastmi T-Shirt', price: 599 })"
+          style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="custom" style="padding:4rem 2rem;">
+  <div style="max-width:1200px; margin:auto; text-align:center;">
+    <h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🧵 Custom Design Zone</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:2rem;">
+
+      <!-- Your Photo T-Shirt -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/personilze t shirt.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Your Photo T-Shirt</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹699</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Your Photo T-Shirt">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Your Photo T-Shirt', price: 699 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Name Printed Mug -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/mug.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Name Printed Mug</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Name Printed Mug">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Name Printed Mug', price: 399 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Personalized Keychain -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/KeyCraft.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Personalized Keychain</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹249</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Personalized Keychain">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Personalized Keychain', price: 249 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Blue Coffee Mug -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/coffee cup.png" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Blue Coffee Mug</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹399</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Blue Coffee Mug">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Blue Coffee Mug', price: 399 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Tote Bag -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1); position:relative;">
+        <span style="position:absolute; top:10px; right:10px; background:#00b894; color:#fff; padding:4px 8px; font-size:12px; font-weight:bold; border-radius:4px;">🚚 FREE SHIPPING</span>
+        <img src="./image/tote bag.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Tote Bag</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹199</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Tote Bag">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <p style="color:#00b894; font-weight:bold;">🚚 Free Shipping Across India</p>
+        <button onclick="addToCart({ name: 'Tote Bag', price: 199 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="digital-design-items" style="padding:4rem 2rem;">
+  <div style="max-width:1200px; margin:auto; text-align:center;">
+    <h2 style="font-size:2rem; margin-bottom:2rem; color:#d84315;">🧵 Digital Design Items</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
+
+      <!-- Logo Design -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        <img src="./image/logo icons.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Logo Design</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹199</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Logo Design">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <button onclick="addToCart({ name: 'Logo Design', price: 199 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Poster / Banner Design -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        <img src="./image/banner icons.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Poster/Banner Design</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹299</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Poster/Banner Design">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <button onclick="addToCart({ name: 'Poster/Banner Design', price: 299 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Business Card Design -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        <img src="./image/business card.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Business Card Design</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹199</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Business Card Design">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <button onclick="addToCart({ name: 'Business Card Design', price: 199 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Website Design -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        <img src="./image/website making.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Website Design</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹1999</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Website Design">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <button onclick="addToCart({ name: 'Website Design', price: 1999 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+      <!-- Brand Name Songs Making -->
+      <div class="product-card" style="background:#fff; padding:1rem; border-radius:1rem; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        <img src="./image/music.jpg" style="width:100%; border-radius:1rem; margin-bottom:1rem;"/>
+        <h3 style="color:#333;">Brand Name Songs Making</h3>
+        <p class="product-price" style="font-weight:bold; color:#d84315;">₹499</p>
+        <!-- ⭐ Ratings & Reviews Section -->
+<div class="rating-section">
+  <div class="stars" data-product="Brand Name Songs Making">
+    ★★★★★
+  </div>
+  <textarea class="review-input" placeholder="Write your review..."></textarea>
+  <button class="submit-review">Submit Review</button>
+  <ul class="reviews-list"></ul>
+</div>
+
+        <button onclick="addToCart({ name: 'Brand Name Songs Making', price: 499 })"
+                style="padding:8px 16px; background:#ff6600; color:#fff; border:none; border-radius:6px; cursor:pointer;">
+          🛒 Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 </main>
   <script src="script.js"></script>
 
   <!-- ✅ Gift Card Redirect Button -->
-<a href="giftcard.html" class="gift-card-link">🎁 Create Your TejBuziups Gift Card</a>
+ <a href="giftcard.html" class="btn-primary">🎁 Get Your Gift Card</a>
 
-  <footer>
-  <div class="footer-content" style="text-align: center;">
-    <p>© 2025 <strong style="color: #ffd9d2;">TejBuziups</strong>. All rights reserved.</p>
-    <p>🧵 Crafted with care, faith, and desi tradition.</p>
-    <p>
-      <span style="font-weight: 600;">Designed & Maintained by:</span>
-      <a href="index.html" style="color: #fff; text-decoration: underline;">Prikshit Tyagi</a>
+  <footer style="background: linear-gradient(45deg, #d84315, #ff7043); color: #fff; padding: 30px 15px; text-align: center; border-top: 4px solid #ffab91;">
+  <div class="footer-content" style="max-width: 800px; margin: auto; line-height: 1.8;">
+    <p style="font-size: 1rem; margin-bottom: 10px;">
+      © 2025 <strong style="color: #ffe0e0;">TejBuziups</strong>. All rights reserved.
     </p>
-    Connect with us:
-    <a href="https://www.instagram.com/buziup_tej/" target="_blank" style="color:#ffd9d2;">Instagram</a> |
-    <a href="https://wa.me/917017270882" style="color:#ffd9d2;">WhatsApp</a>
-  </p>
-  <!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com" target="_blank">
-<img src="https://hitwebcounter.com/counter/counter.php?page=21136904&style=0001&nbdigits=5&type=page&initCount=250" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>      
+    <p style="margin-bottom: 10px; font-style: italic;">
+      🧵 Crafted with care, faith, and desi tradition.
+    </p>
+    <p style="margin-bottom: 20px;">
+      <span style="font-weight: 600;">Designed & Maintained by:</span>
+      <a href="index.html" style="color: #fff; text-decoration: underline; font-weight: bold;">Prikshit Tyagi</a>
+    </p>
+    <div style="margin-bottom: 15px;">
+      <span style="font-weight: 600;">Connect with us:</span>
+      <a href="https://www.instagram.com/buziup_tej/" target="_blank" style="color: #ffe0e0; text-decoration: none; font-weight: bold; margin: 0 8px;">📸 Instagram</a> |
+      <a href="https://wa.me/917017270882" target="_blank" style="color: #ffe0e0; text-decoration: none; font-weight: bold; margin: 0 8px;">💬 WhatsApp</a>
+    </div>
+    <div style="margin-top: 10px;">
+      <!-- Web Counter -->
+      <a href="https://www.hitwebcounter.com" target="_blank">
+        <img src="https://hitwebcounter.com/counter/counter.php?page=21136904&style=0001&nbdigits=5&type=page&initCount=250" 
+             alt="Visit counter For Websites" 
+             title="Counter Widget"
+             style="border: none; margin-top: 10px;">
+      </a>
+    </div>
   </div>
 </footer>
+
 
 </script>
   <head>

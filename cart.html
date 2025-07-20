@@ -1,226 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TejBuziups Cart</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background: linear-gradient(to right, #ffecd2, #fcb69f);
-    }
-    h2, h3 {
-      color: #333;
-    }
-    #order-section {
-      background: #fff;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      max-width: 500px;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    .btn-cart {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #ff6600;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    li {
-      background: #fff;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 6px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      flex-wrap: wrap;
-    }
-    .remove-btn, .qty-btn {
-      background: red;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      margin-left: 5px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .qty-btn {
-      background: #ffa500;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🛒 TejBuziups Cart</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0; padding: 0;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+  }
+  /* 🌟 Brand Header */
+  header {
+    background: linear-gradient(90deg,#ff512f,#dd2476);
+    color:#fff;
+    padding:1rem;
+    text-align:center;
+  }
+  header h1 {
+    margin:0;
+    font-size:2rem;
+    letter-spacing:1px;
+  }
+  header p {
+    margin:5px 0 0;
+    font-style:italic;
+    font-size:0.95rem;
+  }
+  h2,h3 {
+    color:#333;
+    text-align:center;
+  }
+  ul {
+    list-style:none; padding:0; margin:0 auto; max-width:500px;
+  }
+  li {
+    background:#fff; margin-bottom:10px; padding:10px;
+    border-radius:8px; display:flex; justify-content:space-between;
+    align-items:center; box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    flex-wrap:wrap;
+  }
+  #order-section {
+    background:#fff; padding:20px; margin-top:20px;
+    border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    max-width:500px; margin-left:auto; margin-right:auto;
+  }
+  input,select,textarea {
+    width:100%; padding:10px; margin-top:6px;
+    border:1px solid #ccc; border-radius:6px; font-size:14px;
+  }
+  .btn-cart {
+    margin-top:15px; padding:10px 20px;
+    background:linear-gradient(90deg,#ff6a00,#ee0979);
+    color:#fff; border:none;
+    border-radius:6px; cursor:pointer; font-weight:bold;
+    transition:transform 0.3s;
+  }
+  .btn-cart:hover { transform:scale(1.05); }
+  .remove-btn,.qty-btn {
+    background:red; color:#fff; border:none;
+    padding:5px 10px; margin-left:5px;
+    border-radius:4px; cursor:pointer; font-size:14px;
+  }
+  .qty-btn { background:#ffa500; }
+  .file-label { display:block; margin-top:12px; font-weight:bold; color:#444; }
+  .giftbox-option { margin-top:10px; display:flex; align-items:center; gap:8px; }
+  footer {
+    margin-top:40px;
+    text-align:center;
+    padding:1rem;
+    background:#222;
+    color:#fff;
+    font-size:0.9rem;
+  }
+  footer a { color:#ffb8a7; text-decoration:none; }
+  footer a:hover { text-decoration:underline; }
+</style>
 </head>
 <body>
-  <h2>🛒 Your Cart</h2>
-  <ul id="cart-list"></ul>
-  <h3 id="total"></h3>
 
+<!-- 🌟 Brand Header -->
+<header>
+  <img src="./image/logo.png" alt="TejBuziups Logo" style="height:60px; margin-bottom:10px;">
+  <h1>🛒 TejBuziups Cart</h1>
+  <p>Tera Style, Teri Soch – Har order mein ek nayi kahani!</p>
+</header>
+
+<h2>🛍️ Your Selected Items</h2>
+<ul id="cart-list"></ul>
+<h3 id="total"></h3>
+
+<div style="text-align:center;">
   <button onclick="toggleForm()" class="btn-cart" id="whatsapp-btn">📲 Order via WhatsApp</button>
-  <button onclick="clearCart()" class="btn-cart" style="background:red">🗑 Clear Cart</button>
+  <button onclick="clearCart()" class="btn-cart" style="background:#e63946;">🗑 Clear Cart</button>
+</div>
+<!-- 🌟 HOME BUTTON -->
+<div style="text-align:center; margin-top:20px;">
+  <a href="index.html" 
+     style="display:inline-block; padding:10px 20px; 
+            background:linear-gradient(90deg,#ff6a00,#ee0979);
+            color:#fff; border-radius:8px; font-weight:bold;
+            text-decoration:none; box-shadow:0 6px 12px rgba(255,105,135,0.3);
+            transition:0.3s ease;">
+    🏠 More Shopping
+  </a>
+</div>
 
-  <div id="order-section" style="display: none;">
-    <h2>📋 Customer Details</h2>
-    <form id="order-form">
-      <label>Your Name *</label>
-      <input id="cust-name" placeholder="Enter your name" required>
+<div id="order-section" style="display:none;">
+  <h2>📋 Customer Details</h2>
+  <form id="order-form">
+    <label>Your Name *</label>
+    <input id="cust-name" required placeholder="Enter your name">
 
-      <label>Mobile *</label>
-      <input type="text" id="cust-phone" pattern="\d{10}" maxlength="10" required>
+    <label>Mobile *</label>
+    <input type="text" id="cust-phone" pattern="\d{10}" maxlength="10" required placeholder="10-digit mobile">
 
-      <label>Email *</label>
-      <input type="email" id="cust-email" required>
+    <label>Email *</label>
+    <input type="email" id="cust-email" required placeholder="Your email">
 
-      <label>Size (Optional)</label>
-      <select id="cust-size">
-        <option value="">-- Select --</option>
-        <option>S</option><option>M</option><option>L</option><option>XL</option>
-      </select>
+    <label>Size (Optional)</label>
+    <select id="cust-size">
+      <option value="">-- Select --</option>
+      <option>S</option><option>M</option><option>L</option><option>XL</option>
+    </select>
 
-      <label>Color (Optional)</label>
-      <select id="cust-color">
-        <option value="">--Select product Color--</option>
-        <option>Black</option><option>White</option><option>Red</option>
-        <option>Navy Blue</option><option>Maroon</option><option>Olive Green</option>
-      </select>
+    <label>Color (Optional)</label>
+    <select id="cust-color">
+      <option value="">-- Select product Color --</option>
+      <option>Black</option><option>White</option><option>Red</option>
+      <option>Navy Blue</option><option>Maroon</option><option>Olive Green</option>
+    </select>
 
-      <label>Address *</label>
-      <textarea id="cust-address" required></textarea>
+    <label>Address *</label>
+    <textarea id="cust-address" required placeholder="Your full address"></textarea>
 
-      <label>Note (Optional)</label>
-      <textarea id="cust-note"></textarea>
+    <label>Note (Optional)</label>
+    <textarea id="cust-note" placeholder="Any additional note"></textarea>
 
-      <button type="submit" class="btn-cart">✅ Submit & Send on WhatsApp</button>
-    </form>
-  </div>
+    <!-- 📦 GIFT BOX OPTION -->
+    <div class="giftbox-option">
+      <input type="checkbox" id="cust-giftbox">
+      <label for="cust-giftbox">🎁 Add Gift Box (₹50 extra)</label>
+    </div>
 
-  <script>
-    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    const cartList = document.getElementById("cart-list");
-    const totalEl = document.getElementById("total");
-    const whatsappBtn = document.getElementById("whatsapp-btn");
+    <!-- 📸 Image Upload -->
+    <label class="file-label">Upload Image (Optional)</label>
+    <input type="file" id="cust-image" accept="image/*">
+    <p style="font-size:13px;color:#444;margin-top:4px;">
+      📌 If you upload an image, kindly attach it manually in WhatsApp after submitting.
+    </p>
 
-    function renderCart() {
-      cartList.innerHTML = "";
-      let total = 0;
+    <button type="submit" class="btn-cart">✅ Submit & Send on WhatsApp</button>
+  </form>
+</div>
 
-      if (cartItems.length === 0) {
-        cartList.innerHTML = '<li>Your cart is empty.🛍️</li>';
-        totalEl.textContent = '';
-        document.getElementById("order-section").style.display = "none";
-        whatsappBtn.disabled = true;
-        return;
-      }
+<footer>
+  <p>© 2025 <strong>TejBuziups</strong>. All rights reserved.</p>
+  <p>🧵 Crafted with care, faith, and desi tradition.</p>
+  <p>
+    Connect with us:
+    <a href="https://www.instagram.com/buziup_tej/" target="_blank">Instagram</a> |
+    <a href="https://wa.me/917017270882" target="_blank">WhatsApp</a>
+  </p>
+</footer>
 
-      whatsappBtn.disabled = false;
+<script>
+  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  const cartList=document.getElementById("cart-list");
+  const totalEl=document.getElementById("total");
+  const whatsappBtn=document.getElementById("whatsapp-btn");
 
-      cartItems.forEach((item, index) => {
-        const li = document.createElement("li");
-
-        li.innerHTML = `
-          <div>
-            <strong>${item.name}</strong><br>
-            ₹${item.price} x ${item.qty || 1} = ₹${item.price * (item.qty || 1)}
-          </div>
-        `;
-
-        const plusBtn = document.createElement("button");
-        plusBtn.textContent = "+";
-        plusBtn.className = "qty-btn";
-        plusBtn.onclick = () => {
-          item.qty = (item.qty || 1) + 1;
-          localStorage.setItem("cartItems", JSON.stringify(cartItems));
-          renderCart();
-        };
-
-        const minusBtn = document.createElement("button");
-        minusBtn.textContent = "-";
-        minusBtn.className = "qty-btn";
-        minusBtn.onclick = () => {
-          item.qty = (item.qty || 1) - 1;
-          if (item.qty <= 0) item.qty = 1;
-          localStorage.setItem("cartItems", JSON.stringify(cartItems));
-          renderCart();
-        };
-
-        const removeBtn = document.createElement("button");
-        removeBtn.textContent = "Remove";
-        removeBtn.className = "remove-btn";
-        removeBtn.onclick = () => {
-          cartItems.splice(index, 1);
-          localStorage.setItem("cartItems", JSON.stringify(cartItems));
-          renderCart();
-        };
-
-        li.appendChild(minusBtn);
-        li.appendChild(plusBtn);
-        li.appendChild(removeBtn);
-        cartList.appendChild(li);
-
-        total += item.price * (item.qty || 1);
-      });
-
-      totalEl.textContent = "Total: ₹" + total;
+  function renderCart(){
+    cartList.innerHTML=""; let total=0;
+    if(cartItems.length===0){
+      cartList.innerHTML='<li>Your cart is empty. 🛍️</li>';
+      totalEl.textContent=""; document.getElementById("order-section").style.display="none"; whatsappBtn.disabled=true; return;
     }
-
-    function toggleForm() {
-      const section = document.getElementById("order-section");
-      section.style.display = section.style.display === "none" ? "block" : "none";
-    }
-    function addToCart(productName) {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.push(productName);
-  localStorage.setItem("cart", JSON.stringify(cart));
-  alert(productName + " added to cart!");
-}
-
-    function clearCart() {
-      if (confirm("Are you sure you want to clear the cart?")) {
-        localStorage.removeItem("cartItems");
-        cartItems = [];
-        renderCart();
-      }
-    }
-
-    document.getElementById("order-form").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const name = document.getElementById("cust-name").value;
-      const phone = document.getElementById("cust-phone").value;
-      const email = document.getElementById("cust-email").value;
-      const size = document.getElementById("cust-size").value;
-      const color = document.getElementById("cust-color").value;
-      const address = document.getElementById("cust-address").value;
-      const note = document.getElementById("cust-note").value;
-
-      const orderDetails = cartItems.map(i =>
-        `🖼️ *${i.name}*\n💵 ₹${i.price} x ${i.qty || 1} = ₹${i.price * (i.qty || 1)}\n📐 Size: ${i.size || size || "N/A"}, 🎨 Color: ${i.color || color || "N/A"}`
-      ).join("\n\n");
-
-      let total = cartItems.reduce((sum, i) => sum + i.price * (i.qty || 1), 0);
-
-      const message = `📦 *New TejBuziups Order*\n\n${orderDetails}\n\n💰 *Total:* ₹${total}\n\n👤 *Customer Info:*\n📛 Name: ${name}\n📞 Phone: ${phone}\n📧 Email: ${email}\n📐 Size: ${size || "N/A"}\n🎨 Color: ${color || "N/A"}\n🏠 Address: ${address}\n📝 Note: ${note || "N/A"}`;
-
-      const whatsappURL = `https://wa.me/917017270882?text=${encodeURIComponent(message)}`;
-      window.open(whatsappURL, "_blank");
+    whatsappBtn.disabled=false;
+    cartItems.forEach((item,index)=>{
+      const li=document.createElement("li");
+      li.innerHTML=`<div><strong>${item.name}</strong><br>₹${item.price} x ${item.qty||1} = ₹${item.price*(item.qty||1)}</div>`;
+      const plus=document.createElement("button");
+      plus.textContent="+"; plus.className="qty-btn";
+      plus.onclick=()=>{item.qty=(item.qty||1)+1;saveCart();renderCart();};
+      const minus=document.createElement("button");
+      minus.textContent="-"; minus.className="qty-btn";
+      minus.onclick=()=>{item.qty=(item.qty||1)-1;if(item.qty<=0)item.qty=1;saveCart();renderCart();};
+      const remove=document.createElement("button");
+      remove.textContent="Remove"; remove.className="remove-btn";
+      remove.onclick=()=>{cartItems.splice(index,1);saveCart();renderCart();};
+      li.appendChild(minus);li.appendChild(plus);li.appendChild(remove);
+      cartList.appendChild(li);
+      total+=item.price*(item.qty||1);
     });
-
-    renderCart();
-  </script>
+    totalEl.textContent="Total: ₹"+total;
+  }
+  function saveCart(){localStorage.setItem("cartItems",JSON.stringify(cartItems));}
+  function toggleForm(){
+    const sec=document.getElementById("order-section");
+    sec.style.display=sec.style.display==="none"?"block":"none";
+  }
+  function clearCart(){
+    if(confirm("Are you sure you want to clear the cart?")){
+      localStorage.removeItem("cartItems");cartItems=[];renderCart();
+    }
+  }
+  document.getElementById("order-form").addEventListener("submit",function(e){
+    e.preventDefault();
+    const name=document.getElementById("cust-name").value;
+    const phone=document.getElementById("cust-phone").value;
+    const email=document.getElementById("cust-email").value;
+    const size=document.getElementById("cust-size").value;
+    const color=document.getElementById("cust-color").value;
+    const address=document.getElementById("cust-address").value;
+    const note=document.getElementById("cust-note").value;
+    const giftboxChecked=document.getElementById("cust-giftbox").checked;
+    const giftboxText=giftboxChecked?"✅ Gift Box Requested (₹50 extra)":"❌ No Gift Box";
+    const imageInput=document.getElementById("cust-image");
+    let imageNote=imageInput.files.length>0?
+      "📸 Customer uploaded an image. Ask them to attach on WhatsApp.":
+      "📸 No image uploaded.";
+    const orderDetails=cartItems.map(i=>
+      `🖼️ *${i.name}*\n💵 ₹${i.price} x ${i.qty||1} = ₹${i.price*(i.qty||1)}`
+    ).join("\n\n");
+    let total=cartItems.reduce((sum,i)=>sum+i.price*(i.qty||1),0);
+    const message=`📦 *New TejBuziups Order*\n\n${orderDetails}\n\n${giftboxText}\n\n💰 *Total:* ₹${total}\n\n👤 *Customer Info:*\n📛 Name: ${name}\n📞 Phone: ${phone}\n📧 Email: ${email}\n📊 Size: ${size||"N/A"}\n🎨 Color: ${color||"N/A"}\n🏠 Address: ${address}\n📜 Note: ${note||"N/A"}\n\n${imageNote}`;
+    window.open(`https://wa.me/917017270882?text=${encodeURIComponent(message)}`,"_blank");
+  });
+  renderCart();
+</script>
 </body>
 </html>

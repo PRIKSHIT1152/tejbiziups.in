@@ -1,216 +1,320 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>TejBuziups Gift Card</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 40px;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #ffecd2, #fcb69f);
-      text-align: center;
-      overflow-x: hidden;
-    }
-
-    .input-container {
-      background: #ffffffcc;
-      padding: 20px 30px;
-      display: inline-block;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      backdrop-filter: blur(5px);
-      margin-bottom: 20px;
-    }
-
-    input, select, button {
-      padding: 10px 15px;
-      font-size: 16px;
-      border-radius: 10px;
-      margin: 8px 6px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      background: linear-gradient(90deg, #f875aa, #fd9f9f);
-      color: white;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 6px 12px rgba(255, 105, 135, 0.3);
-      transition: 0.3s ease;
-    }
-
-    button:hover {
-      transform: scale(1.05);
-      background: linear-gradient(90deg, #ff3e6c, #ff9966);
-    }
-
-    canvas {
-      margin: 30px auto;
-      display: block;
-      border-radius: 25px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-      border: 6px solid transparent;
-      border-image: linear-gradient(45deg, #ff6a00, #ee0979) 1;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🎁 TejBuziups Gift Card</title>
+<style>
+  body {
+    margin:0;
+    padding:30px;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#ffe0ec,#ffd8b8);
+    text-align:center;
+    color:#333;
+  }
+  h2 {
+    font-size:2rem;
+    margin-bottom:10px;
+    background:linear-gradient(to right,#ff512f,#dd2476);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .tagline {font-style:italic;color:#555;margin-bottom:30px;}
+  .input-container {
+    background:#ffffffd9;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.15);
+    display:inline-block;
+    backdrop-filter:blur(5px);
+    margin-bottom:30px;
+  }
+  input,select,button {
+    padding:10px;font-size:16px;border-radius:8px;margin:8px 6px;
+    border:1px solid #ccc;outline:none;
+  }
+  button {
+    background:linear-gradient(90deg,#ff6a00,#ee0979);
+    color:#fff;font-weight:bold;border:none;cursor:pointer;
+    box-shadow:0 6px 12px rgba(255,105,135,0.3);
+    transition:0.3s ease;
+  }
+  button:hover {transform:scale(1.05);}
+  canvas {
+    margin:20px auto;
+    display:block;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+  }
+  #canvas-wrapper {
+    position:relative;
+    display:inline-block;
+  }
+  #scratch-layer {
+    position:absolute;
+    top:0;left:0;
+    cursor:crosshair;
+    display:none; /* 👈 HIDDEN by default */
+  }
+</style>
 </head>
 <body>
-  <h2>🦋✨ TejBuziups Gift Card Generator ✨🦋</h2>
+<h2>🎀🌸🦋 TejBuziups Gift Card 🦋🌸🎀</h2>
+<p class="tagline">"Tera Style, Teri Soch – Har card mein ek nayi kahani!"</p>
 
-  <div class="input-container">
-    <input type="text" id="nameInput" placeholder="Apka Naam likho" />
-    <input type="file" id="photoInput" accept="image/*" onchange="loadImage(event)" />
-    <select id="themeSelect">
-      <option value="romantic">Romantic Rose</option>
-      <option value="birthday">Birthday Balloons</option>
-      <option value="bhakti">Floral Bhakti</option>
-      <option value="motivation">Motivational Swag</option>
-      <option value="festive">Festive Sparkle</option>
-      <option value="friendship">Friendly Bond</option>
-      <option value="anniversary">Anniversary Love</option>
-      <option value="thankyou">Thank You Vibe</option>
-      <option value="goodluck">Good Luck Spark</option>
-      <option value="apology">Apology Note</option>
-      <option value="goodmorning">Good Morning Sunshine</option>
-    </select><br/>
-    <button onclick="generateCard()">🎨 Generate</button>
-    <button onclick="downloadCard()">📥 Download</button>
-  </div>
+<div class="input-container">
+  <input type="text" id="nameInput" placeholder="Apka Naam" />
+  <input type="file" id="photoInput" accept="image/*">
+  <select id="themeSelect">
+  <option value="romantic">Romantic Rose</option>
+  <option value="birthday">Birthday Balloons</option>
+  <option value="bhakti">Floral Bhakti</option>
+  <option value="motivation">Motivational Swag</option>
+  <option value="festive">Festive Sparkle</option>
+  <option value="friendship">Friendly Bond</option>
+  <option value="anniversary">Anniversary Love</option>
+  <option value="thankyou">Thank You Vibe</option>
+  <option value="goodluck">Good Luck Spark</option>
+  <option value="apology">Apology Note</option>
+  <option value="goodmorning">Good Morning Sunshine</option>
+  <option value="newyear">New Year Fireworks</option>
+  <option value="navratri">Navratri Vibes</option>
+  <option value="diwali">Diwali Lights</option>
+  <option value="eid">Eid Mubarak</option>
+  <option value="christmas">Christmas Cheer</option>
+  <option value="rakhi">Raksha Bandhan</option>
+  <option value="independence">15 August / Independence</option>
+  <option value="ganesh">Ganesh Chaturthi</option>
+  <option value="janmashtami">Janmashtami</option>
+  <option value="karvachauth">Karva Chauth</option>
+  <option value="holi">Holi Festival</option>
+  <option value="makar">Makar Sankranti</option>
+</select>
 
-  <canvas id="cardCanvas" width="700" height="400"></canvas>
+  <button onclick="generateCard()">🎨 Generate</button>
+  <button onclick="downloadCard()">📥 Download</button>
+</div>
 
-  <script>
-    const canvas = document.getElementById('cardCanvas');
-    const ctx = canvas.getContext('2d');
-    let uploadedImage = null;
+<div id="canvas-wrapper">
+  <canvas id="cardCanvas" width="700" height="500"></canvas>
+  <canvas id="scratch-layer" width="700" height="500"></canvas>
+</div>
 
-    const themes = {
-      romantic: "Teri Muskaan, Meri Pehchaan — TejBuziups ke is tohfe mein hai tera naam.",
-      birthday: "Happy Birthday! Yeh tohfa tere naam, TejBuziups ke pyaar ke saath.",
-      bhakti: "Bhagwan ki kripa aur TejBuziups ka pyaar — dono tere saath ho hamesha.",
-      motivation: "Utho, Badho, Jeeto — Swag ke saath, TejBuziups ke gift ke saath!",
-      festive: "Tyohar ki khushiyan aur TejBuziups ka pyar — dono jashn karo!",
-      friendship: "Dosti ka ye bandhan sadaa banaye rakho — TejBuziups ke ek pyaare gift ke saath!",
-      anniversary: "Har saal ki yaad mein, ek chhota sa gift TejBuziups ki taraf se.",
-      thankyou: "Shukriya kehna ho toh kehna style ke saath — TejBuziups gift ke saath!",
-      goodluck: "Nayi shuruaat ho ya exam — TejBuziups ki taraf se Good Luck!",
-      apology: "Kabhi kabhi ek sorry bhi kaafi hota hai — TejBuziups ke pyaar bhare andaaz mein.",
-      goodmorning: "Subah ki ek muskaan, din bhar ki taaqat — Good Morning from TejBuziups!"
-    };
+<script>
+const themes = {
+  romantic:"🌹 Pyar aur Khushboo – TejBuziups se ek anmol tohfa.",
+  birthday:"🎉 Happy Birthday! Khushiyo se bhara din ho.",
+  bhakti:"🕉️ Bhagwan ki kripa aur TejBuziups ka pyaar sada.",
+  motivation:"💪 Sapno ki udaan, TejBuziups ke saath.",
+  festive:"🎊 Har tyohar pe ek nayi kahani – TejBuziups se.",
+  friendship:"🤝 Dosti ka rang kabhi na utre.",
+  anniversary:"💞 Saal dar saal pyaar ka saathi – TejBuziups.",
+  thankyou:"🙏 Shukriya kehna bhi ek kala hai – TejBuziups ke saath.",
+  goodluck:"🍀 Har manzil pe khushkismati bane saathi.",
+  apology:"💌 Ek maafi aur ek muskaan – TejBuziups.",
+  goodmorning:"🌞 Subah mubarak ho, din shandar ho!",
+  newyear:"🎆 Naya saal naye sapne lekar aaye!",
+  navratri:"💃 Navratri ke rang mein rang jao!",
+  diwali:"🪔 Diwali ki roshni aur khushiyan!",
+  eid:"🌙 Eid Mubarak! Barkatein barkatein.",
+  christmas:"🎄 Christmas ki blessings aur gifts!",
+  // ✨ NEW THEMES ✨
+  rakhi:"💝 Raksha Bandhan Mubarak! Pyar bhara ye bandhan sada bane rahe!",
+  independence:"🇮🇳 15 August Mubarak! Deshbhakti aur khushiyan hamesha saath rahein!",
+  ganesh:"🐘 Ganesh Chaturthi ki shubhkamnayein! Ganpati Bappa Moriya!",
+  janmashtami:"🎻 Krishna Janmashtami Mubarak! Murli ki madhurta sada bani rahe!",
+  karvachauth:"💞 Karva Chauth ka pyar aur vishwas sada bani rahe!",
+  holi:"🎨 Holi ke rango mein rang jao, khushiyon se ghar sajjao!",
+  makar:"🪁 Makar Sankranti ki badhai! Patang aur sapne dono uchaiyon tak!"
+};
 
-    const qrImage = new Image();
-    qrImage.src = "image\tejbuziups_card_qr.png"; // Replace with your QR image path
+const rewards=[
+ "🎁 10% Discount",
+ "🎁 Free Mug",
+ "🎁 Free Keychain",
+ "🎁 ₹50 Cashback",
+ "🎁 Surprise Gift!",
+ "🎁 Special Coupon",
+ "🎁 Mystery Box",
+ "🎁 Buy 1 Get 1",
+ "🎁 Lucky Charm",
+ "🎁 10% OFF on next order",
+ "🎁 Free Keychain with purchase",
+ "🎁 Mystery Gift with next shopping",
+ "🎁 ₹50 Cashback Coupon",
+ "🎁 Free Delivery Coupon",
+ "🎁 Special Festival Gift",
+ "🎁 Surprise Mug Gift",
+ "🎁 Extra Points Added to Account",
+ "🎁 Golden Lucky Draw Entry",
+ "🎁 Premium Gift Wrapping Free"
+];
 
-    function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
-      const words = text.split(" ");
-      let line = '', offset = 0;
-      for (let i = 0; i < words.length; i++) {
-        let testLine = line + words[i] + ' ';
-        if (ctx.measureText(testLine).width > maxWidth && i > 0) {
-          ctx.fillText(line, x, y + offset);
-          line = words[i] + ' ';
-          offset += lineHeight;
-        } else {
-          line = testLine;
-        }
-      }
-      ctx.fillText(line, x, y + offset);
-    }
+let uploadedImage=null;
+const canvas=document.getElementById('cardCanvas');
+const ctx=canvas.getContext('2d');
+const scratchCanvas=document.getElementById('scratch-layer');
+const sctx=scratchCanvas.getContext('2d');
+let isDrawing=false;
+let rewardText="";
 
-    function loadImage(event) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        uploadedImage = new Image();
-        uploadedImage.onload = () => generateCard();
-        uploadedImage.src = reader.result;
-      };
-      reader.readAsDataURL(event.target.files[0]);
-    }
+document.getElementById('photoInput').addEventListener('change',e=>{
+ const reader=new FileReader();
+ reader.onload=()=>{
+  uploadedImage=new Image();
+  uploadedImage.onload=generateCard;
+  uploadedImage.src=reader.result;
+ };
+ reader.readAsDataURL(e.target.files[0]);
+});
 
-    function generateCard() {
-      const name = document.getElementById('nameInput').value || "Dost";
-      const theme = document.getElementById('themeSelect').value;
-      const msg = themes[theme];
+function wrapText(ctx,text,x,y,maxWidth,lineHeight){
+ const words=text.split(" ");
+ let line="",offset=0;
+ for(let i=0;i<words.length;i++){
+   const test=line+words[i]+" ";
+   if(ctx.measureText(test).width>maxWidth && i>0){
+     ctx.fillText(line,x,y+offset);
+     line=words[i]+" ";
+     offset+=lineHeight;
+   } else line=test;
+ }
+ ctx.fillText(line,x,y+offset);
+}
 
-      // Background Gradient
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, "#f3e5f5");
-      gradient.addColorStop(1, "#ffebee");
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+function generateCard(){
+ const name=document.getElementById('nameInput').value||"Dost";
+ const theme=document.getElementById('themeSelect').value;
+ const msg=themes[theme];
+ rewardText=rewards[Math.floor(Math.random()*rewards.length)];
+ ctx.clearRect(0,0,canvas.width,canvas.height);
 
-      // Butterfly and sparkle emojis
-      ctx.font = "24px serif";
-      ctx.fillText("🦋✨🦋✨", 280, 40);
-      ctx.fillText("✨🦋✨🦋", 280, 360);
+ // background
+ const gradient=ctx.createLinearGradient(0,0,700,500);
+ gradient.addColorStop(0,"#fff1f5");
+ gradient.addColorStop(1,"#ffe0f0");
+ ctx.fillStyle=gradient;
+ ctx.fillRect(0,0,700,500);
 
-      // Mountains
-      ctx.fillStyle = "#8d6e63";
-      ctx.beginPath();
-      ctx.moveTo(0, 300);
-      ctx.lineTo(100, 200);
-      ctx.lineTo(200, 300);
-      ctx.lineTo(300, 180);
-      ctx.lineTo(400, 300);
-      ctx.lineTo(500, 220);
-      ctx.lineTo(600, 300);
-      ctx.lineTo(700, 240);
-      ctx.lineTo(700, 400);
-      ctx.lineTo(0, 400);
-      ctx.closePath();
-      ctx.fill();
+ // decorations
+ ctx.font="32px serif";
+ ctx.fillText("🌸🦋🎀",20,40);
+ ctx.fillText("🎀🦋🌸",600,40);
+ ctx.fillText("🌸🎁🌺",20,480);
+ ctx.fillText("🌺🎁🌸",600,480);
 
-      // Profile Photo Circle
-      if (uploadedImage) {
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(100, 100, 50, 0, Math.PI * 2);
-        ctx.closePath();
-        ctx.clip();
-        ctx.drawImage(uploadedImage, 50, 50, 100, 100);
-        ctx.restore();
-      }
+ // ribbon
+ ctx.strokeStyle="#ff4081";
+ ctx.lineWidth=5;
+ ctx.beginPath();
+ ctx.moveTo(0,80);ctx.lineTo(700,80);ctx.stroke();
 
-      
-      // Heading
-  ctx.font = "bold 26px Arial";
-  ctx.fillStyle = "#333";
-  ctx.fillText("TejBuziups Gift Card", 160, 60);
+ ctx.font="bold 30px 'Segoe UI'";
+ ctx.fillStyle="#d84315";
+ ctx.fillText("✨ TejBuziups Gift Card ✨",180,65);
 
-  
-      // Name
-      ctx.font = "24px 'Segoe UI'";
-      ctx.fillStyle = "#333";
-      ctx.fillText(`To: ${name}`, 180, 100);
+ // profile photo
+ if(uploadedImage){
+   ctx.save();
+   const g=ctx.createLinearGradient(50,50,150,150);
+   g.addColorStop(0,"#ffd700");g.addColorStop(1,"#ff69b4");
+   ctx.beginPath();
+   ctx.arc(100,130,55,0,Math.PI*2);
+   ctx.lineWidth=6;
+   ctx.strokeStyle=g;ctx.stroke();ctx.closePath();
+   ctx.clip();
+   ctx.drawImage(uploadedImage,50,80,100,100);
+   ctx.restore();
+ }
 
-      // Message
-      ctx.font = "18px 'Segoe UI'";
-      ctx.fillStyle = "#e91e63";
-      wrapText(ctx, msg, 180, 150, 480, 30);
+ ctx.font="24px 'Segoe UI'";
+ ctx.fillStyle="#333";
+ ctx.fillText(`To: ${name}`,180,150);
+ ctx.strokeStyle="#d4af37";
+ ctx.setLineDash([2,6]);
+ ctx.beginPath();ctx.moveTo(180,155);ctx.lineTo(480,155);ctx.stroke();
+ ctx.setLineDash([]);
 
-      // QR
-      if (qrImage.complete) {
-        ctx.drawImage(qrImage, 560, 260, 100, 100);
-      } else {
-        qrImage.onload = () => ctx.drawImage(qrImage, 560, 260, 100, 100);
-      }
+ ctx.font="18px 'Segoe UI'";
+ ctx.fillStyle="#e91e63";
+ wrapText(ctx,msg,180,200,480,30);
 
-      // Footer
-      ctx.font = "14px monospace";
-      ctx.fillStyle = "#000";
-      ctx.fillText("www.tejbuziups.in — Tera Style, Teri Soch", 200, 380);
-    }
+ // reward box in card
+ ctx.fillStyle="#fff8dc";
+ ctx.fillRect(200,360,300,80);
+ ctx.strokeStyle="#d84315";ctx.lineWidth=3;ctx.strokeRect(200,360,300,80);
+ ctx.font="16px 'Segoe UI'";ctx.fillStyle="#d84315";ctx.textAlign="center";
+ ctx.fillText("✨ Scratch Here For Reward ✨",350,400);ctx.textAlign="start";
 
-    function downloadCard() {
-      const link = document.createElement('a');
-      link.download = 'TejBuziups_GiftCard.png';
-      link.href = canvas.toDataURL();
-      link.click();
-    }
+ // QR
+ const qr=new Image();
+ qr.src="image/tejbuziups_card_qr.png";
+ qr.onload=()=>ctx.drawImage(qr,580,360,90,90);
 
-  </script>
+ // enable scratch layer after card is ready
+ setupScratch();
+ scratchCanvas.style.display="block"; // 👈 SHOW AFTER GENERATE
+}
+
+function setupScratch(){
+ sctx.clearRect(0,0,scratchCanvas.width,scratchCanvas.height);
+ sctx.globalCompositeOperation='source-over';
+ sctx.fillStyle="#999";
+ sctx.fillRect(200,360,300,80);
+ sctx.fillStyle="#fff";
+ sctx.font="18px sans-serif";
+ sctx.textAlign="center";
+ sctx.fillText("✨ Scratch ✨",350,400);
+ sctx.textAlign="start";
+}
+
+scratchCanvas.addEventListener('mousedown',()=>isDrawing=true);
+scratchCanvas.addEventListener('mouseup',()=>isDrawing=false);
+scratchCanvas.addEventListener('mousemove',scratch);
+scratchCanvas.addEventListener('touchstart',()=>isDrawing=true);
+scratchCanvas.addEventListener('touchend',()=>isDrawing=false);
+scratchCanvas.addEventListener('touchmove',scratchTouch);
+
+function erase(x,y){
+ sctx.globalCompositeOperation='destination-out';
+ sctx.beginPath();
+ sctx.arc(x,y,20,0,Math.PI*2);
+ sctx.fill();
+ ctx.save();
+ ctx.font="20px 'Segoe UI'";
+ ctx.fillStyle="#d84315";
+ ctx.textAlign="center";
+ ctx.fillText(rewardText,350,390);
+ ctx.textAlign="start";
+ ctx.restore();
+}
+
+function scratch(e){
+ if(!isDrawing)return;
+ const rect=scratchCanvas.getBoundingClientRect();
+ const x=e.clientX-rect.left;
+ const y=e.clientY-rect.top;
+ if(x>200&&x<500&&y>360&&y<440){erase(x,y);}
+}
+function scratchTouch(e){
+ if(!isDrawing)return;
+ e.preventDefault();
+ const rect=scratchCanvas.getBoundingClientRect();
+ const x=e.touches[0].clientX-rect.left;
+ const y=e.touches[0].clientY-rect.top;
+ if(x>200&&x<500&&y>360&&y<440){erase(x,y);}
+}
+
+function downloadCard(){
+ const link=document.createElement('a');
+ link.download='TejBuziups_GiftCard.png';
+ link.href=canvas.toDataURL();
+ link.click();
+}
+
+// Start with scratch hidden
+scratchCanvas.style.display="none";
+</script>
 </body>
 </html>
